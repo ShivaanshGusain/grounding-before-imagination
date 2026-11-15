@@ -6,8 +6,10 @@
                      (control: same architecture and compute, no learned dynamics)
 
 The predictor's weights are frozen; gradients flow through it into the writer.
-Training uses only train-split sequences (which never contain held-out actions)
-and only the first --T-train steps, so longer horizons are a generalisation test.
+Training uses only the WRITER part (first 60%) of the train scenes, whose sequences never
+contain held-out actions, and only the first --T-train steps, so longer horizons are a
+generalisation test. The other 40% of train scenes are reserved for the evaluation probes.
+The random predictor is re-drawn per seed (seed 1234 + --seed); evaluate.py uses the same draw.
 
 Usage:  python writer.py --mode predictive --text runs/text_hf.pt --seed 0 --out runs/writer_predictive_s0.pt
 """
@@ -31,6 +33,28 @@ class Writer(nn.Module):
 
     def forward(self, h):
         return self.net(h)
+
+
+WRITER_FRAC = 0.6   # writers train on the first 60% of train scenes; probes train on the other 40%
+
+
+def writer_train_mask(split, frac=WRITER_FRAC):
+    """Scenes the WRITER is fit on. The remaining train scenes are reserved for the probes, so probe
+    features are out-of-sample for the writer (no stacking leak)."""
+    idx = (split == 0).nonzero().squeeze(1)
+    mask = torch.zeros_like(split, dtype=torch.bool)
+    mask[idx[: int(frac * len(idx))]] = True
+    return mask
+
+
+def safe_standardize_stats(X):
+    """Mean / scale with a floor: columns ~constant in train pass through unscaled instead of x1e5."""
+    mu, sd = X.mean(0), X.std(0)
+    return mu, torch.where(sd < 1e-4, torch.ones_like(sd), sd)
+
+
+def random_predictor_seed(run_seed):
+    return 1234 + run_seed
 
 
 def load_predictor(wm_path, mode, device, seed=1234):
@@ -79,13 +103,13 @@ def main():
     data = torch.load(args.data, weights_only=False)
     H = torch.load(args.text, weights_only=False)["features"].float()
     split = data["split"]
-    tr, va = split == 0, split == 1
-    mu, sd = H[tr].mean(0), H[tr].std(0) + 1e-5
+    tr, va = writer_train_mask(split), split == 1
+    mu, sd = safe_standardize_stats(H[tr])
     H = ((H - mu) / sd).to(dev)
     Z = data["latents"].float().to(dev)
     A = data["actions"].to(dev)
 
-    pred = load_predictor(args.wm, args.mode, dev)
+    pred = load_predictor(args.wm, args.mode, dev, seed=random_predictor_seed(args.seed))
     writer = Writer(H.shape[1]).to(dev)
     opt = torch.optim.AdamW(writer.parameters(), lr=args.lr, weight_decay=0.05)
 

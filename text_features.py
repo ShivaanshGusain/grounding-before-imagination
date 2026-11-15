@@ -17,6 +17,26 @@ import re
 import torch
 
 
+_ENTITIES = ["red", "blue", "green", "yellow", "purple", "pusher", "table", "surface"]
+
+
+def _bound_grams(t):
+    """Entity-bound features: in each sentence, tie every word/number to the sentence's entity
+    (colour / pusher / table), plus coarse bins of the k-th number, so BOW knows WHICH object is where."""
+    out = []
+    for sent in t.split(". "):
+        words = re.findall(r"[a-z]+", sent)
+        ent = next((w for w in words if w in _ENTITIES), None)
+        if ent is None:
+            continue
+        ent = "table" if ent == "surface" else ent
+        out += [f"{ent}|{w}" for w in words]
+        for k, num in enumerate(re.findall(r"\d+\.\d+", sent)):
+            v = float(num)
+            out += [f"{ent}|n{k}|b10_{int(v * 10)}", f"{ent}|n{k}|b20_{int(v * 20)}"]
+    return out
+
+
 def bow_features(texts, dim=4096):
     X = torch.zeros(len(texts), dim)
     for i, t in enumerate(texts):
@@ -24,6 +44,7 @@ def bow_features(texts, dim=4096):
         grams = re.findall(r"[a-z]+|\d+\.\d+|\d+", t)
         s = f" {t} "
         grams += [s[j:j + n] for n in (3, 4, 5) for j in range(len(s) - n + 1)]
+        grams += _bound_grams(t)
         for g in grams:
             h = int(hashlib.md5(g.encode()).hexdigest()[:8], 16)
             X[i, h % dim] += 1.0 if (h >> 31) & 1 else -1.0

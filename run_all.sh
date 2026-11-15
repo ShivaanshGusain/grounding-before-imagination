@@ -15,6 +15,13 @@ else
 fi
 mkdir -p runs results logs
 
+# Save EVERYTHING this script prints (stdout + stderr) to one timestamped file, while still showing it.
+RUN_LOG="logs/run_${PROFILE}_$(date +%Y%m%d_%H%M%S).log"
+exec > >(tee -a "$RUN_LOG") 2>&1
+echo "full transcript -> $RUN_LOG"
+echo "host: $(hostname)  date: $(date)  profile: $PROFILE"
+python -c "import torch; print('torch', torch.__version__, 'cuda', torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else '')"
+
 echo "== 1. pretrain + freeze the world model"
 python world_model.py --steps "$WM_STEPS" --out runs/wm.pt 2>&1 | tee logs/wm.log
 

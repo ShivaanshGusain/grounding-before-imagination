@@ -118,8 +118,11 @@ def _resolve_pair(pos, vel, mass, i, j, rad, kinematic_i: bool, contact):
     approaching = (vi_n - vj_n) > 0
     mi, mj = mass[:, i], mass[:, j]
     if kinematic_i:
-        # pusher keeps its commanded velocity; puck bounces off it (momentum formula)
-        vj_new = ((mj - mi) * vj_n + 2 * mi * vi_n) / (mi + mj)
+        # The pusher keeps its commanded velocity. The puck receives momentum as if the pusher
+        # had mass PUSHER_MASS (so light pucks fly off faster than heavy ones), but its normal
+        # velocity is clamped to be at least the pusher's: a puck never keeps moving INTO it.
+        vj_new = (mj * vj_n + mi * vi_n + mi * E_BALL * (vi_n - vj_n)) / (mi + mj)
+        vj_new = torch.maximum(vj_new, vi_n)
         upd = hit & approaching
         vel[:, j] += ((vj_new - vj_n) * upd).unsqueeze(-1) * n
         pos[:, j] += (overlap.clamp_min(0) * hit).unsqueeze(-1) * n
@@ -134,6 +137,31 @@ def _resolve_pair(pos, vel, mass, i, j, rad, kinematic_i: bool, contact):
         pos[:, j] += corr
     contact[:, i, j] |= hit
     contact[:, j, i] |= hit
+
+
+def _clamp_walls(pos, rad):
+    lo, hi = rad.view(1, -1, 1), 1.0 - rad.view(1, -1, 1)
+    pos.copy_(torch.max(torch.min(pos, hi), lo))
+
+
+def _project(pos, rad, iters=3):
+    """Position-only relaxation so bodies never interpenetrate (e.g. pusher vs wall-pinned puck).
+    Pusher-puck overlaps move the PUSHER back (the puck may be blocked by a wall)."""
+    for _ in range(iters):
+        for j in range(1, N_BODIES):
+            d = pos[:, j] - pos[:, 0]
+            dist = d.norm(dim=-1).clamp_min(1e-6)
+            ov = ((rad[0] + rad[j]) - dist).clamp_min(0.0)
+            pos[:, 0] -= ov.unsqueeze(-1) * d / dist.unsqueeze(-1)
+        for i in range(1, N_BODIES):
+            for j in range(i + 1, N_BODIES):
+                d = pos[:, j] - pos[:, i]
+                dist = d.norm(dim=-1).clamp_min(1e-6)
+                ov = ((rad[i] + rad[j]) - dist).clamp_min(0.0)
+                corr = (ov / 2).unsqueeze(-1) * d / dist.unsqueeze(-1)
+                pos[:, i] -= corr
+                pos[:, j] += corr
+        _clamp_walls(pos, rad)
 
 
 @torch.no_grad()
@@ -158,6 +186,7 @@ def simulate(scene: Scene, actions: torch.Tensor):
         vel[:, 0] = dirs[actions[:, t]] * PUSHER_SPEED
         for _ in range(SUBSTEPS):
             pos[:, 0] += vel[:, 0] * dt
+            pos[:, 0] = pos[:, 0].clamp(R_PUSHER, 1.0 - R_PUSHER)
             pos[:, 1:] += vel[:, 1:] * dt
             vel[:, 1:] *= (1.0 - scene.friction * dt).clamp_min(0.0).view(B, 1, 1)
             for j in range(1, N_BODIES):
@@ -165,11 +194,12 @@ def simulate(scene: Scene, actions: torch.Tensor):
             for i in range(1, N_BODIES):
                 for j in range(i + 1, N_BODIES):
                     _resolve_pair(pos, vel, scene.mass, i, j, rad, False, contact)
-            # walls
+            # walls: reflect only components that are out of bounds AND moving outward
             lo, hi = rad.view(1, -1, 1), 1.0 - rad.view(1, -1, 1)
-            below, above = pos < lo, pos > hi
-            vel[:, 1:] = torch.where((below | above)[:, 1:], -E_WALL * vel[:, 1:], vel[:, 1:])
-            pos = torch.max(torch.min(pos, hi), lo)
+            out_wall = ((pos < lo) & (vel < 0)) | ((pos > hi) & (vel > 0))
+            vel[:, 1:] = torch.where(out_wall[:, 1:], -E_WALL * vel[:, 1:], vel[:, 1:])
+            _clamp_walls(pos, rad)
+            _project(pos, rad)
         vel[:, 0] = 0.0          # the pusher stops between macro steps
         out.append(torch.cat([pos, vel], -1))
     return torch.stack(out, 1), contact

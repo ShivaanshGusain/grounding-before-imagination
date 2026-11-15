@@ -5,10 +5,13 @@ end to end on a domain we fully control.
 
   encoder E: (frame_t, frame_{t-1}) -> z_t in R^D
   predictor P: (z_t, a_t) -> z_{t+1}       (residual MLP, rolled out recursively)
-Loss: multi-step latent prediction against an EMA target encoder
+Loss: multi-step latent prediction against an EMA target encoder (from online-encoder inputs AND
+      from target-encoder inputs, so the predictor matches the frozen encoder it ships with)
       + VICReg variance/covariance terms to prevent collapse.
+After training: a short predictor-only calibration on target-encoder latents, then a sanity check.
+Ship = EMA target encoder + predictor.
 
-Usage:  python world_model.py --out runs/wm.pt [--steps 15000]
+Usage:  python world_model.py --out runs/wm.pt [--steps 8000]
 """
 from __future__ import annotations
 
@@ -94,25 +97,40 @@ def make_batch(B, T, rng, gen, device, size=64):
     return sim.frame_pairs(frames), actions.to(device), states
 
 
-def ridge_r2(X, Y, Xt, Yt, lam=1e-2):
-    """Closed-form ridge probe; returns mean R^2 over target dims."""
-    mu, sd = X.mean(0), X.std(0) + 1e-6
-    X, Xt = (X - mu) / sd, (Xt - mu) / sd
-    X = torch.cat([X, torch.ones(len(X), 1, device=X.device)], 1)
-    Xt = torch.cat([Xt, torch.ones(len(Xt), 1, device=Xt.device)], 1)
-    W = torch.linalg.solve(X.T @ X + lam * torch.eye(X.shape[1], device=X.device), X.T @ Y)
-    pred = Xt @ W
-    ss_res = ((Yt - pred) ** 2).sum(0)
-    ss_tot = ((Yt - Yt.mean(0)) ** 2).sum(0) + 1e-9
+def _ridge_fit(X, Y, lam):
+    mu, sd = X.mean(0), X.std(0)
+    sd = torch.where(sd < 1e-6, torch.ones_like(sd), sd)
+    Xs = torch.cat([(X - mu) / sd, torch.ones(len(X), 1, device=X.device)], 1)
+    W = torch.linalg.solve(Xs.T @ Xs + lam * torch.eye(Xs.shape[1], device=X.device), Xs.T @ Y)
+    return lambda Z: torch.cat([(Z - mu) / sd, torch.ones(len(Z), 1, device=Z.device)], 1) @ W
+
+
+def _r2(Y, P):
+    ss_res = ((Y - P) ** 2).sum(0)
+    ss_tot = ((Y - Y.mean(0)) ** 2).sum(0) + 1e-9
     return (1 - ss_res / ss_tot).mean().item()
 
 
+def ridge_r2(X, Y, Xt, Yt):
+    """Ridge probe with lambda chosen on a held-out 20% of the training half; returns (test R^2, train R^2)."""
+    n_fit = int(0.8 * len(X))
+    best_lam, best = None, -float("inf")
+    for lam in (1e-2, 1e-1, 1.0, 10.0, 100.0, 1000.0):
+        r = _r2(Y[n_fit:], _ridge_fit(X[:n_fit], Y[:n_fit], lam)(X[n_fit:]))
+        if r > best:
+            best_lam, best = lam, r
+    f = _ridge_fit(X, Y, best_lam)
+    return _r2(Yt, f(Xt)), _r2(Y, f(X))
+
+
 @torch.no_grad()
-def sanity_check(enc, pred, rng, gen, device, T, n=2048):
-    """How good is the frozen world model? (state decodability + rollout quality)."""
+def sanity_check(enc, pred, rng, gen, device, T, n=2048, enc_online=None):
+    """How good is the frozen world model? (state decodability + rollout quality).
+
+    Rollout metrics start from the FROZEN encoder's latents (that is what everything downstream does)."""
     enc.eval(); pred.eval()
     xs, acts, sts = [], [], []
-    for _ in range(n // 256):
+    for _ in range(max(1, n // 256)):
         x, a, s = make_batch(256, T, rng, gen, device)
         xs.append(x); acts.append(a); sts.append(s)
     x, a, s = torch.cat(xs), torch.cat(acts), torch.cat(sts)
@@ -120,14 +138,28 @@ def sanity_check(enc, pred, rng, gen, device, T, n=2048):
     zr = pred.rollout(z[:, 0], a)                # (n, T, D)
     target = s[..., :2].reshape(len(s), T + 1, -1)  # positions of all bodies
     half = len(s) // 2
-    out = {"state_probe_R2_encoder_t0": ridge_r2(z[:half, 0], target[:half, 0], z[half:, 0], target[half:, 0])}
+    te, tr = ridge_r2(z[:half, 0], target[:half, 0], z[half:, 0], target[half:, 0])
+    out = {"state_probe_R2_encoder_t0": te, "state_probe_R2_encoder_t0_train": tr,
+           "latent_std_mean": z.reshape(-1, z.shape[-1]).std(0).mean().item()}
+    if enc_online is not None:
+        enc_online.eval()
+        zo = enc_online(x)
+        out["online_target_gap"] = (((zo - z) ** 2).mean() / z.reshape(-1, z.shape[-1]).var(0).mean()).item()
+        enc_online.train()
     for t in range(1, T + 1):
-        out[f"state_probe_R2_rollout_t{t}"] = ridge_r2(z[:half, t], target[:half, t], zr[half:, t - 1], target[half:, t])
+        out[f"state_probe_R2_rollout_t{t}"] = ridge_r2(z[:half, t], target[:half, t], zr[half:, t - 1], target[half:, t])[0]
         err = ((zr[:, t - 1] - z[:, t]) ** 2).mean().item()
         persist = ((z[:, 0] - z[:, t]) ** 2).mean().item()
         out[f"rollout_err_over_persistence_t{t}"] = err / max(persist, 1e-9)
     enc.train(); pred.train()
     return out
+
+
+def predictor_loss(pred, z_in, z_tgt, a):
+    """One-step + full-rollout latent prediction loss. z_in: inputs (B,T+1,D); z_tgt: targets (B,T+1,D)."""
+    one_step = pred(z_in[:, :-1].reshape(-1, D_LATENT), a.reshape(-1)).reshape_as(z_in[:, 1:])
+    multi = pred.rollout(z_in[:, 0], a)
+    return F.mse_loss(one_step, z_tgt[:, 1:]) + F.mse_loss(multi, z_tgt[:, 1:])
 
 
 def main():
@@ -156,12 +188,14 @@ def main():
         z = enc(x)                                      # (B, T+1, D)
         with torch.no_grad():
             zt = tgt(x)
-        one_step = pred(z[:, :-1].reshape(-1, D_LATENT), a.reshape(-1)).reshape_as(z[:, 1:])
-        multi = pred.rollout(z[:, 0], a)
-        loss_pred = F.mse_loss(one_step, zt[:, 1:]) + F.mse_loss(multi, zt[:, 1:])
+        # (i) online inputs -> target latents: trains encoder + predictor (the JEPA signal)
+        loss_pred = predictor_loss(pred, z, zt, a)
+        # (ii) target inputs -> target latents: trains the predictor on the distribution it will see
+        #      once frozen (downstream always rolls out from the EMA target encoder's latents)
+        loss_pred_tgt = predictor_loss(pred, zt, zt, a)
         loss_align = F.mse_loss(z, zt)                  # keep online close to target space
         var_l, cov_l = vicreg_terms(z)
-        loss = loss_pred + 0.1 * loss_align + 1.0 * var_l + 0.04 * cov_l
+        loss = loss_pred + loss_pred_tgt + 0.1 * loss_align + 1.0 * var_l + 0.04 * cov_l
         opt.zero_grad(set_to_none=True)
         loss.backward()
         torch.nn.utils.clip_grad_norm_(list(enc.parameters()) + list(pred.parameters()), 1.0)
@@ -169,12 +203,26 @@ def main():
         with torch.no_grad():
             for p, q in zip(tgt.parameters(), enc.parameters()):
                 p.mul_(args.ema).add_(q.detach(), alpha=1 - args.ema)
-        if step % 200 == 0 or step == 1:
+        if step % max(1, min(200, args.steps // 10)) == 0 or step == 1:
             print(f"step {step:6d} loss {loss.item():.4f} pred {loss_pred.item():.4f} "
                   f"var {var_l.item():.3f} cov {cov_l.item():.3f} ({time.time() - t0:.0f}s)", flush=True)
 
-    # The frozen world model = EMA target encoder + predictor (predictor was trained to hit its outputs).
-    report = sanity_check(tgt, pred, rng, gen, dev, args.T, n=512 if args.steps < 1000 else 2048)
+    # Calibration: encoder frozen, predictor fine-tuned only on target-encoder inputs/targets.
+    calib_steps = min(1000, max(1, args.steps // 4))
+    copt = torch.optim.AdamW(pred.parameters(), lr=args.lr * 0.3, weight_decay=0.01)
+    for step in range(1, calib_steps + 1):
+        x, a, _ = make_batch(args.batch, args.T, rng, gen, dev)
+        with torch.no_grad():
+            zt = tgt(x)
+        loss = predictor_loss(pred, zt, zt, a)
+        copt.zero_grad(set_to_none=True)
+        loss.backward()
+        copt.step()
+        if step % max(1, calib_steps // 5) == 0:
+            print(f"calib {step:5d}/{calib_steps} pred-on-target {loss.item():.4f}", flush=True)
+
+    # The frozen world model = EMA target encoder + calibrated predictor.
+    report = sanity_check(tgt, pred, rng, gen, dev, args.T, n=2048, enc_online=enc)
     print(json.dumps(report, indent=2))
     torch.save({"encoder": tgt.state_dict(), "predictor": pred.state_dict(),
                 "args": vars(args), "sanity": report}, args.out)
