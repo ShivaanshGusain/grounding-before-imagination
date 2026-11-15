@@ -1,0 +1,83 @@
+full transcript -> logs/run_smoke_20261115_125651.log
+host: 6cd1526b6621  date: Sun Nov 15 12:56:51 UTC 2026  profile: smoke
+torch 2.8.0a0+34c6371d24.nv25.08 cuda True NVIDIA GB10
+== 1. pretrain + freeze the world model
+step      1 loss 1.0271 pred 0.0185 var 0.990 cov 0.000 (1s)
+step      6 loss 0.9691 pred 0.0181 var 0.948 cov 0.001 (3s)
+step     12 loss 1.0835 pred 0.2998 var 0.557 cov 5.061 (4s)
+step     18 loss 0.8528 pred 0.0306 var 0.810 cov 0.179 (6s)
+step     24 loss 0.7939 pred 0.0313 var 0.722 cov 0.783 (8s)
+step     30 loss 0.7473 pred 0.0049 var 0.659 cov 1.767 (9s)
+step     36 loss 0.7475 pred 0.0044 var 0.663 cov 1.668 (11s)
+step     42 loss 0.7418 pred 0.0022 var 0.656 cov 1.782 (13s)
+step     48 loss 0.7402 pred 0.0013 var 0.636 cov 2.237 (14s)
+step     54 loss 0.7394 pred 0.0010 var 0.644 cov 2.045 (16s)
+step     60 loss 0.7395 pred 0.0010 var 0.647 cov 1.970 (18s)
+calib     3/15 pred-on-target 0.0001
+calib     6/15 pred-on-target 0.0001
+calib     9/15 pred-on-target 0.0001
+calib    12/15 pred-on-target 0.0001
+calib    15/15 pred-on-target 0.0001
+{
+  "state_probe_R2_encoder_t0": 0.08675888180732727,
+  "state_probe_R2_encoder_t0_train": 0.17145729064941406,
+  "latent_std_mean": 0.005756184458732605,
+  "online_target_gap": 3432.27783203125,
+  "state_probe_R2_rollout_t1": -10.822425842285156,
+  "rollout_err_over_persistence_t1": 5683.0384747009375,
+  "state_probe_R2_rollout_t2": -19.115570068359375,
+  "rollout_err_over_persistence_t2": 2925.2225085959103,
+  "state_probe_R2_rollout_t3": -141.059814453125,
+  "rollout_err_over_persistence_t3": 2448.260097398783,
+  "state_probe_R2_rollout_t4": -213.8797607421875,
+  "rollout_err_over_persistence_t4": 2293.684651825283,
+  "state_probe_R2_rollout_t5": -307.1761474609375,
+  "rollout_err_over_persistence_t5": 2256.257124632585,
+  "state_probe_R2_rollout_t6": -326.12640380859375,
+  "rollout_err_over_persistence_t6": 2290.800595625167
+}
+saved runs/wm.pt
+== 2. grounding dataset (frozen encoder latents, texts, labels)
+scenes 240/240
+saved runs/data.pt
+example text: The surface of the table is rough. The pusher starts at position (0.19, 0.79). A yellow heavy metal puck is at position (0.62, 0.74). There is a blue steel puck at position (0.50, 0.46). A red wood puck is at (0.72, 0.30).
+label red_contacted: class counts [584, 376]
+label red_moved: class counts [653, 307]
+label red_hit_other: class counts [834, 126]
+label red_final_region: class counts [104, 133, 105, 126, 96, 85, 93, 88, 130]
+held-out-action sequences in test: 96 / 192
+== 3. text features: bow
+saved runs/text_bow.pt (240, 4096)
+== 4. writer static / bow / seed 0
+[static s0] epoch   0 val loss 0.0027 rollout nan static 0.0027
+[static s0] epoch   1 val loss 0.0025 rollout nan static 0.0025
+[static s0] epoch   2 val loss 0.0026 rollout nan static 0.0026
+saved runs/writer_static_bow_s0.pt best val 0.0025089564733207226
+== 4. writer predictive / bow / seed 0
+[predictive s0] epoch   0 val loss 0.0030 rollout 0.0027 static 0.0028
+[predictive s0] epoch   1 val loss 0.0028 rollout 0.0025 static 0.0026
+[predictive s0] epoch   2 val loss 0.0029 rollout 0.0026 static 0.0026
+saved runs/writer_predictive_bow_s0.pt best val 0.0027930191718041897
+== 4. writer random / bow / seed 0
+[random s0] epoch   0 val loss 0.0092 rollout 0.0088 static 0.0041
+[random s0] epoch   1 val loss 0.0070 rollout 0.0064 static 0.0057
+[random s0] epoch   2 val loss 0.0066 rollout 0.0058 static 0.0081
+saved runs/writer_random_bow_s0.pt best val 0.006590035744011402
+== 5. evaluate: bow
+{'train': 272, 'val': 96, 'test_seen': 96, 'test_unseen': 96} rows per group
+[seed 0] static            z0 retrieval@1 0.021  err/persist seen: 393794.07 169960.05 145243.17 119328.84 105674.86 103040.82 103752.35 104271.34 | unseen: 395300.69 163540.01 133098.27 122680.66 121369.97 112844.84 103719.64 103331.25
+[seed 0] predictive        z0 retrieval@1 0.021  err/persist seen: 391780.24 168765.46 144072.14 118288.53 104672.60 101987.04 102622.24 103059.51 | unseen: 393450.13 162442.20 132073.96 121638.54 120259.50 111731.80 102622.52 102168.46
+[seed 0] random_writer     z0 retrieval@1 0.021  err/persist seen: 815273.13 304258.53 307471.10 371639.00 509284.04 723233.63 1014025.00 1358911.31 | unseen: 835405.98 286945.37 277795.76 382253.14 576651.57 776296.23 991799.86 1328970.58
+[seed 0] pred_state_randP  z0 retrieval@1 0.021  err/persist seen: 644490.18 514099.56 727101.26 912751.57 1161960.98 1527493.97 1993748.71 2513404.20 | unseen: 644399.84 483261.51 655774.04 931947.19 1317319.33 1649896.41 1958731.00 2457893.06
+[seed 0] pred_state_shufA  z0 retrieval@1 0.021  err/persist seen: 391790.78 168841.44 144052.51 118390.86 104699.39 102044.32 102632.18 102920.01 | unseen: 393220.89 162287.10 132205.52 121469.74 120155.91 111672.20 102524.47 102198.65
+[seed 0] probes done: a_text
+[seed 0] probes done: b_writer_state
+[seed 0] probes done: c_rollout_pred
+[seed 0] probes done: c_rollout_stat
+[seed 0] probes done: e1_state_randP
+[seed 0] probes done: e2_state_shufA
+[seed 0] probes done: e3_randwriter
+[seed 0] probes done: d_priv_start
+[seed 0] probes done: f_priv_future
+wrote results/bow/report.md
+done. Reports: results/*/report.md   World-model sanity: tail logs/wm.log

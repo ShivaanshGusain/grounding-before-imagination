@@ -1,0 +1,4 @@
+[predictive s0] epoch   0 val loss 0.0030 rollout 0.0027 static 0.0028
+[predictive s0] epoch   1 val loss 0.0028 rollout 0.0025 static 0.0026
+[predictive s0] epoch   2 val loss 0.0029 rollout 0.0026 static 0.0026
+saved runs/writer_predictive_bow_s0.pt best val 0.0027930191718041897

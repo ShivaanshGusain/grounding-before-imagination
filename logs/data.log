@@ -1,0 +1,8 @@
+scenes 240/240
+saved runs/data.pt
+example text: The surface of the table is rough. The pusher starts at position (0.19, 0.79). A yellow heavy metal puck is at position (0.62, 0.74). There is a blue steel puck at position (0.50, 0.46). A red wood puck is at (0.72, 0.30).
+label red_contacted: class counts [584, 376]
+label red_moved: class counts [653, 307]
+label red_hit_other: class counts [834, 126]
+label red_final_region: class counts [104, 133, 105, 126, 96, 85, 93, 88, 130]
+held-out-action sequences in test: 96 / 192

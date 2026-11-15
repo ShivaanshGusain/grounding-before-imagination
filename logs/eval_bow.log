@@ -1,0 +1,16 @@
+{'train': 272, 'val': 96, 'test_seen': 96, 'test_unseen': 96} rows per group
+[seed 0] static            z0 retrieval@1 0.021  err/persist seen: 393794.07 169960.05 145243.17 119328.84 105674.86 103040.82 103752.35 104271.34 | unseen: 395300.69 163540.01 133098.27 122680.66 121369.97 112844.84 103719.64 103331.25
+[seed 0] predictive        z0 retrieval@1 0.021  err/persist seen: 391780.24 168765.46 144072.14 118288.53 104672.60 101987.04 102622.24 103059.51 | unseen: 393450.13 162442.20 132073.96 121638.54 120259.50 111731.80 102622.52 102168.46
+[seed 0] random_writer     z0 retrieval@1 0.021  err/persist seen: 815273.13 304258.53 307471.10 371639.00 509284.04 723233.63 1014025.00 1358911.31 | unseen: 835405.98 286945.37 277795.76 382253.14 576651.57 776296.23 991799.86 1328970.58
+[seed 0] pred_state_randP  z0 retrieval@1 0.021  err/persist seen: 644490.18 514099.56 727101.26 912751.57 1161960.98 1527493.97 1993748.71 2513404.20 | unseen: 644399.84 483261.51 655774.04 931947.19 1317319.33 1649896.41 1958731.00 2457893.06
+[seed 0] pred_state_shufA  z0 retrieval@1 0.021  err/persist seen: 391790.78 168841.44 144052.51 118390.86 104699.39 102044.32 102632.18 102920.01 | unseen: 393220.89 162287.10 132205.52 121469.74 120155.91 111672.20 102524.47 102198.65
+[seed 0] probes done: a_text
+[seed 0] probes done: b_writer_state
+[seed 0] probes done: c_rollout_pred
+[seed 0] probes done: c_rollout_stat
+[seed 0] probes done: e1_state_randP
+[seed 0] probes done: e2_state_shufA
+[seed 0] probes done: e3_randwriter
+[seed 0] probes done: d_priv_start
+[seed 0] probes done: f_priv_future
+wrote results/bow/report.md
