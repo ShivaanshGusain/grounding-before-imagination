@@ -1,0 +1,5 @@
+# model checkpoints and datasets: large (full data.pt > 100 MB, GitHub's per-file limit)
+runs/
+__pycache__/
+*.pyc
+# keep logs/ and results/ in git so they can be reviewed
