@@ -61,7 +61,7 @@ def load_predictor(wm_path, mode, device, seed=1234):
     if mode == "random":
         # fixed random init shared by training and evaluation; fork so the caller's RNG is untouched
         with torch.random.fork_rng(devices=[]):
-            torch.manual_seed(seed)
+            torch.random.default_generator.manual_seed(seed)   # CPU only: CUDA RNG stays untouched
             pred = Predictor().to(device)
     else:
         pred = Predictor().to(device)
