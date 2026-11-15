@@ -1,9 +1,9 @@
-{'train': 272, 'val': 96, 'test_seen': 96, 'test_unseen': 96} rows per group
-[seed 0] static            z0 retrieval@1 0.021  err/persist seen: 393794.07 169960.05 145243.17 119328.84 105674.86 103040.82 103752.35 104271.34 | unseen: 395300.69 163540.01 133098.27 122680.66 121369.97 112844.84 103719.64 103331.25
-[seed 0] predictive        z0 retrieval@1 0.021  err/persist seen: 391780.24 168765.46 144072.14 118288.53 104672.60 101987.04 102622.24 103059.51 | unseen: 393450.13 162442.20 132073.96 121638.54 120259.50 111731.80 102622.52 102168.46
-[seed 0] random_writer     z0 retrieval@1 0.021  err/persist seen: 815273.13 304258.53 307471.10 371639.00 509284.04 723233.63 1014025.00 1358911.31 | unseen: 835405.98 286945.37 277795.76 382253.14 576651.57 776296.23 991799.86 1328970.58
-[seed 0] pred_state_randP  z0 retrieval@1 0.021  err/persist seen: 644490.18 514099.56 727101.26 912751.57 1161960.98 1527493.97 1993748.71 2513404.20 | unseen: 644399.84 483261.51 655774.04 931947.19 1317319.33 1649896.41 1958731.00 2457893.06
-[seed 0] pred_state_shufA  z0 retrieval@1 0.021  err/persist seen: 391790.78 168841.44 144052.51 118390.86 104699.39 102044.32 102632.18 102920.01 | unseen: 393220.89 162287.10 132205.52 121469.74 120155.91 111672.20 102524.47 102198.65
+{'train': 13440, 'val': 4800, 'test_seen': 4800, 'test_unseen': 4800} rows per group
+[seed 0] static            z0 retrieval@1 0.439  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 0] predictive        z0 retrieval@1 0.440  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.18
+[seed 0] random_writer     z0 retrieval@1 0.150  err/persist seen: 0.79 0.70 0.66 0.65 0.65 0.65 0.65 0.66 | unseen: 0.77 0.69 0.67 0.66 0.66 0.66 0.67 0.67
+[seed 0] pred_state_randP  z0 retrieval@1 0.440  err/persist seen: 0.97 0.93 0.92 0.92 0.93 0.94 0.96 0.98 | unseen: 0.97 0.93 0.93 0.93 0.94 0.95 0.97 0.99
+[seed 0] pred_state_shufA  z0 retrieval@1 0.440  err/persist seen: 1.14 1.10 1.06 1.05 1.05 1.05 1.03 1.03 | unseen: 1.12 1.09 1.06 1.06 1.06 1.05 1.05 1.04
 [seed 0] probes done: a_text
 [seed 0] probes done: b_writer_state
 [seed 0] probes done: c_rollout_pred
@@ -13,4 +13,32 @@
 [seed 0] probes done: e3_randwriter
 [seed 0] probes done: d_priv_start
 [seed 0] probes done: f_priv_future
+[seed 1] static            z0 retrieval@1 0.445  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 1] predictive        z0 retrieval@1 0.443  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 1] random_writer     z0 retrieval@1 0.161  err/persist seen: 0.79 0.70 0.66 0.65 0.65 0.65 0.66 0.66 | unseen: 0.78 0.69 0.67 0.66 0.66 0.67 0.67 0.68
+[seed 1] pred_state_randP  z0 retrieval@1 0.443  err/persist seen: 0.97 0.93 0.92 0.93 0.94 0.96 0.98 1.01 | unseen: 0.97 0.94 0.93 0.94 0.95 0.97 0.99 1.01
+[seed 1] pred_state_shufA  z0 retrieval@1 0.443  err/persist seen: 1.14 1.10 1.06 1.05 1.05 1.05 1.03 1.03 | unseen: 1.12 1.09 1.06 1.06 1.06 1.05 1.05 1.04
+[seed 1] probes done: a_text
+[seed 1] probes done: b_writer_state
+[seed 1] probes done: c_rollout_pred
+[seed 1] probes done: c_rollout_stat
+[seed 1] probes done: e1_state_randP
+[seed 1] probes done: e2_state_shufA
+[seed 1] probes done: e3_randwriter
+[seed 1] probes done: d_priv_start
+[seed 1] probes done: f_priv_future
+[seed 2] static            z0 retrieval@1 0.433  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 2] predictive        z0 retrieval@1 0.449  err/persist seen: 0.27 0.22 0.20 0.19 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.18
+[seed 2] random_writer     z0 retrieval@1 0.145  err/persist seen: 0.79 0.69 0.66 0.65 0.65 0.65 0.65 0.66 | unseen: 0.77 0.69 0.67 0.66 0.66 0.66 0.67 0.67
+[seed 2] pred_state_randP  z0 retrieval@1 0.449  err/persist seen: 0.97 0.93 0.92 0.92 0.93 0.94 0.96 0.98 | unseen: 0.96 0.93 0.92 0.93 0.94 0.95 0.97 0.99
+[seed 2] pred_state_shufA  z0 retrieval@1 0.449  err/persist seen: 1.14 1.10 1.06 1.05 1.05 1.05 1.03 1.03 | unseen: 1.11 1.09 1.06 1.06 1.06 1.05 1.05 1.04
+[seed 2] probes done: a_text
+[seed 2] probes done: b_writer_state
+[seed 2] probes done: c_rollout_pred
+[seed 2] probes done: c_rollout_stat
+[seed 2] probes done: e1_state_randP
+[seed 2] probes done: e2_state_shufA
+[seed 2] probes done: e3_randwriter
+[seed 2] probes done: d_priv_start
+[seed 2] probes done: f_priv_future
 wrote results/bow/report.md

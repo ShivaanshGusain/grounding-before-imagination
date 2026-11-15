@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|                                                                                                                      | 0/290 [00:00<?, ?it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 290/290 [00:00<00:00, 15587.81it/s]
+64/12000
+1344/12000
+2624/12000
+3904/12000
+5184/12000
+6464/12000
+7744/12000
+9024/12000
+10304/12000
+11584/12000
+saved runs/text_hf.pt (12000, 2688)

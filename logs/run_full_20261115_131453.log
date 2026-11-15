@@ -1,0 +1,1027 @@
+full transcript -> logs/run_full_20261115_131453.log
+host: 6cd1526b6621  date: Sun Nov 15 13:14:53 UTC 2026  profile: full
+torch 2.8.0a0+34c6371d24.nv25.08 cuda True NVIDIA GB10
+== 1. pretrain + freeze the world model
+step      1 loss 1.0271 pred 0.0185 var 0.990 cov 0.000 (1s)
+step    200 loss 0.7424 pred 0.0024 var 0.632 cov 2.324 (55s)
+step    400 loss 0.7320 pred 0.0010 var 0.644 cov 2.061 (109s)
+step    600 loss 0.7278 pred 0.0001 var 0.643 cov 2.090 (164s)
+step    800 loss 0.7267 pred 0.0001 var 0.638 cov 2.198 (218s)
+step   1000 loss 0.7265 pred 0.0001 var 0.638 cov 2.208 (273s)
+step   1200 loss 0.7266 pred 0.0002 var 0.641 cov 2.137 (328s)
+step   1400 loss 0.7263 pred 0.0001 var 0.634 cov 2.308 (382s)
+step   1600 loss 0.7263 pred 0.0003 var 0.634 cov 2.291 (437s)
+step   1800 loss 0.7260 pred 0.0003 var 0.634 cov 2.281 (492s)
+step   2000 loss 0.6571 pred 0.0071 var 0.513 cov 3.079 (547s)
+step   2200 loss 0.5338 pred 0.0231 var 0.352 cov 2.854 (602s)
+step   2400 loss 0.5922 pred 0.1099 var 0.152 cov 4.115 (656s)
+step   2600 loss 0.8656 pred 0.2863 var 0.059 cov 4.438 (711s)
+step   2800 loss 1.2185 pred 0.4392 var 0.010 cov 5.481 (766s)
+step   3000 loss 1.3374 pred 0.5117 var 0.041 cov 4.184 (821s)
+step   3200 loss 1.1412 pred 0.4334 var 0.019 cov 4.490 (876s)
+step   3400 loss 0.9702 pred 0.3697 var 0.013 cov 4.568 (931s)
+step   3600 loss 0.7801 pred 0.2855 var 0.037 cov 3.838 (986s)
+step   3800 loss 0.7144 pred 0.2627 var 0.019 cov 4.160 (1041s)
+step   4000 loss 0.6079 pred 0.2149 var 0.022 cov 3.906 (1096s)
+step   4200 loss 0.6116 pred 0.2198 var 0.011 cov 4.117 (1151s)
+step   4400 loss 0.5716 pred 0.2019 var 0.012 cov 3.967 (1206s)
+step   4600 loss 0.5227 pred 0.1789 var 0.025 cov 3.564 (1260s)
+step   4800 loss 0.5409 pred 0.1909 var 0.024 cov 3.474 (1315s)
+step   5000 loss 0.5276 pred 0.1862 var 0.007 cov 3.781 (1370s)
+step   5200 loss 0.5332 pred 0.1901 var 0.007 cov 3.681 (1425s)
+step   5400 loss 0.5116 pred 0.1798 var 0.020 cov 3.326 (1480s)
+step   5600 loss 0.5023 pred 0.1789 var 0.011 cov 3.406 (1535s)
+step   5800 loss 0.4421 pred 0.1487 var 0.016 cov 3.262 (1590s)
+step   6000 loss 0.4796 pred 0.1689 var 0.017 cov 3.152 (1645s)
+step   6200 loss 0.4302 pred 0.1452 var 0.017 cov 3.115 (1700s)
+step   6400 loss 0.4449 pred 0.1544 var 0.006 cov 3.289 (1755s)
+step   6600 loss 0.4464 pred 0.1562 var 0.018 cov 2.925 (1810s)
+step   6800 loss 0.4735 pred 0.1702 var 0.011 cov 3.066 (1865s)
+step   7000 loss 0.4474 pred 0.1565 var 0.013 cov 3.034 (1920s)
+step   7200 loss 0.4626 pred 0.1660 var 0.012 cov 2.973 (1974s)
+step   7400 loss 0.4926 pred 0.1801 var 0.014 cov 2.968 (2029s)
+step   7600 loss 0.4628 pred 0.1664 var 0.010 cov 2.991 (2084s)
+step   7800 loss 0.5025 pred 0.1854 var 0.009 cov 3.056 (2139s)
+step   8000 loss 0.4536 pred 0.1599 var 0.012 cov 3.042 (2193s)
+calib   200/1000 pred-on-target 0.1740
+calib   400/1000 pred-on-target 0.1641
+calib   600/1000 pred-on-target 0.1629
+calib   800/1000 pred-on-target 0.1649
+calib  1000/1000 pred-on-target 0.1494
+{
+  "state_probe_R2_encoder_t0": 0.38789069652557373,
+  "state_probe_R2_encoder_t0_train": 0.4976806640625,
+  "latent_std_mean": 0.9995743036270142,
+  "online_target_gap": 2.964242230518721e-05,
+  "state_probe_R2_rollout_t1": 0.392048716545105,
+  "rollout_err_over_persistence_t1": 0.03936119180190081,
+  "state_probe_R2_rollout_t2": 0.38846325874328613,
+  "rollout_err_over_persistence_t2": 0.06695435363809833,
+  "state_probe_R2_rollout_t3": 0.3847929835319519,
+  "rollout_err_over_persistence_t3": 0.07754643219805232,
+  "state_probe_R2_rollout_t4": 0.3784479796886444,
+  "rollout_err_over_persistence_t4": 0.08775488228432912,
+  "state_probe_R2_rollout_t5": 0.3736129403114319,
+  "rollout_err_over_persistence_t5": 0.09220973966759963,
+  "state_probe_R2_rollout_t6": 0.36581671237945557,
+  "rollout_err_over_persistence_t6": 0.10145771114839149
+}
+saved runs/wm.pt
+== 2. grounding dataset (frozen encoder latents, texts, labels)
+scenes 256/12000
+scenes 512/12000
+scenes 768/12000
+scenes 1024/12000
+scenes 1280/12000
+scenes 1536/12000
+scenes 1792/12000
+scenes 2048/12000
+scenes 2304/12000
+scenes 2560/12000
+scenes 2816/12000
+scenes 3072/12000
+scenes 3328/12000
+scenes 3584/12000
+scenes 3840/12000
+scenes 4096/12000
+scenes 4352/12000
+scenes 4608/12000
+scenes 4864/12000
+scenes 5120/12000
+scenes 5376/12000
+scenes 5632/12000
+scenes 5888/12000
+scenes 6144/12000
+scenes 6400/12000
+scenes 6656/12000
+scenes 6912/12000
+scenes 7168/12000
+scenes 7424/12000
+scenes 7680/12000
+scenes 7936/12000
+scenes 8192/12000
+scenes 8448/12000
+scenes 8704/12000
+scenes 8960/12000
+scenes 9216/12000
+scenes 9472/12000
+scenes 9728/12000
+scenes 9984/12000
+scenes 10240/12000
+scenes 10496/12000
+scenes 10752/12000
+scenes 11008/12000
+scenes 11264/12000
+scenes 11520/12000
+scenes 11776/12000
+scenes 12000/12000
+saved runs/data.pt
+example text: The table is sticky. The robot pusher is at position (0.19, 0.79). The yellow puck (light wooden) is at x=0.62, y=0.74. There is a red steel puck at x=0.72, y=0.30. The purple puck (light wooden) is at position (0.50, 0.46).
+label red_contacted: class counts [29364, 18636]
+label red_moved: class counts [32548, 15452]
+label red_hit_other: class counts [42659, 5341]
+label red_final_region: class counts [5217, 5467, 5170, 5511, 5353, 5474, 5186, 5353, 5269]
+held-out-action sequences in test: 4800 / 9600
+== 3. text features: bow
+saved runs/text_bow.pt (12000, 4096)
+== 4. writer static / bow / seed 0
+[static s0] epoch   0 val loss 0.8784 rollout nan static 0.8784
+[static s0] epoch   1 val loss 0.7690 rollout nan static 0.7690
+[static s0] epoch   2 val loss 0.6582 rollout nan static 0.6582
+[static s0] epoch   3 val loss 0.5627 rollout nan static 0.5627
+[static s0] epoch   4 val loss 0.5109 rollout nan static 0.5109
+[static s0] epoch   5 val loss 0.4773 rollout nan static 0.4773
+[static s0] epoch   6 val loss 0.4515 rollout nan static 0.4515
+[static s0] epoch   7 val loss 0.4286 rollout nan static 0.4286
+[static s0] epoch   8 val loss 0.4088 rollout nan static 0.4088
+[static s0] epoch   9 val loss 0.3944 rollout nan static 0.3944
+[static s0] epoch  10 val loss 0.3886 rollout nan static 0.3886
+[static s0] epoch  11 val loss 0.3821 rollout nan static 0.3821
+[static s0] epoch  12 val loss 0.3776 rollout nan static 0.3776
+[static s0] epoch  13 val loss 0.3740 rollout nan static 0.3740
+[static s0] epoch  14 val loss 0.3673 rollout nan static 0.3673
+[static s0] epoch  15 val loss 0.3643 rollout nan static 0.3643
+[static s0] epoch  16 val loss 0.3607 rollout nan static 0.3607
+[static s0] epoch  17 val loss 0.3598 rollout nan static 0.3598
+[static s0] epoch  18 val loss 0.3556 rollout nan static 0.3556
+[static s0] epoch  19 val loss 0.3557 rollout nan static 0.3557
+[static s0] epoch  20 val loss 0.3521 rollout nan static 0.3521
+[static s0] epoch  21 val loss 0.3488 rollout nan static 0.3488
+[static s0] epoch  22 val loss 0.3478 rollout nan static 0.3478
+[static s0] epoch  23 val loss 0.3453 rollout nan static 0.3453
+[static s0] epoch  24 val loss 0.3429 rollout nan static 0.3429
+[static s0] epoch  25 val loss 0.3422 rollout nan static 0.3422
+[static s0] epoch  26 val loss 0.3399 rollout nan static 0.3399
+[static s0] epoch  27 val loss 0.3384 rollout nan static 0.3384
+[static s0] epoch  28 val loss 0.3366 rollout nan static 0.3366
+[static s0] epoch  29 val loss 0.3369 rollout nan static 0.3369
+[static s0] epoch  30 val loss 0.3350 rollout nan static 0.3350
+[static s0] epoch  31 val loss 0.3337 rollout nan static 0.3337
+[static s0] epoch  32 val loss 0.3318 rollout nan static 0.3318
+[static s0] epoch  33 val loss 0.3302 rollout nan static 0.3302
+[static s0] epoch  34 val loss 0.3292 rollout nan static 0.3292
+[static s0] epoch  35 val loss 0.3300 rollout nan static 0.3300
+[static s0] epoch  36 val loss 0.3275 rollout nan static 0.3275
+[static s0] epoch  37 val loss 0.3265 rollout nan static 0.3265
+[static s0] epoch  38 val loss 0.3249 rollout nan static 0.3249
+[static s0] epoch  39 val loss 0.3236 rollout nan static 0.3236
+[static s0] epoch  40 val loss 0.3221 rollout nan static 0.3221
+[static s0] epoch  41 val loss 0.3214 rollout nan static 0.3214
+[static s0] epoch  42 val loss 0.3197 rollout nan static 0.3197
+[static s0] epoch  43 val loss 0.3202 rollout nan static 0.3202
+[static s0] epoch  44 val loss 0.3195 rollout nan static 0.3195
+[static s0] epoch  45 val loss 0.3175 rollout nan static 0.3175
+[static s0] epoch  46 val loss 0.3162 rollout nan static 0.3162
+[static s0] epoch  47 val loss 0.3160 rollout nan static 0.3160
+[static s0] epoch  48 val loss 0.3145 rollout nan static 0.3145
+[static s0] epoch  49 val loss 0.3134 rollout nan static 0.3134
+[static s0] epoch  50 val loss 0.3133 rollout nan static 0.3133
+[static s0] epoch  51 val loss 0.3126 rollout nan static 0.3126
+[static s0] epoch  52 val loss 0.3119 rollout nan static 0.3119
+[static s0] epoch  53 val loss 0.3093 rollout nan static 0.3093
+[static s0] epoch  54 val loss 0.3088 rollout nan static 0.3088
+[static s0] epoch  55 val loss 0.3092 rollout nan static 0.3092
+[static s0] epoch  56 val loss 0.3080 rollout nan static 0.3080
+[static s0] epoch  57 val loss 0.3070 rollout nan static 0.3070
+[static s0] epoch  58 val loss 0.3076 rollout nan static 0.3076
+[static s0] epoch  59 val loss 0.3059 rollout nan static 0.3059
+[static s0] epoch  60 val loss 0.3059 rollout nan static 0.3059
+[static s0] epoch  61 val loss 0.3049 rollout nan static 0.3049
+[static s0] epoch  62 val loss 0.3044 rollout nan static 0.3044
+[static s0] epoch  63 val loss 0.3040 rollout nan static 0.3040
+[static s0] epoch  64 val loss 0.3025 rollout nan static 0.3025
+[static s0] epoch  65 val loss 0.3039 rollout nan static 0.3039
+[static s0] epoch  66 val loss 0.3016 rollout nan static 0.3016
+[static s0] epoch  67 val loss 0.3012 rollout nan static 0.3012
+[static s0] epoch  68 val loss 0.3009 rollout nan static 0.3009
+[static s0] epoch  69 val loss 0.2997 rollout nan static 0.2997
+[static s0] epoch  70 val loss 0.2997 rollout nan static 0.2997
+[static s0] epoch  71 val loss 0.2982 rollout nan static 0.2982
+[static s0] epoch  72 val loss 0.2992 rollout nan static 0.2992
+[static s0] epoch  73 val loss 0.2992 rollout nan static 0.2992
+[static s0] epoch  74 val loss 0.2979 rollout nan static 0.2979
+[static s0] epoch  75 val loss 0.2965 rollout nan static 0.2965
+[static s0] epoch  76 val loss 0.2954 rollout nan static 0.2954
+[static s0] epoch  77 val loss 0.2949 rollout nan static 0.2949
+[static s0] epoch  78 val loss 0.2948 rollout nan static 0.2948
+[static s0] epoch  79 val loss 0.2945 rollout nan static 0.2945
+saved runs/writer_static_bow_s0.pt best val 0.2945308983325958
+== 4. writer predictive / bow / seed 0
+[predictive s0] epoch   0 val loss 0.8736 rollout 0.7831 static 0.9058
+[predictive s0] epoch   1 val loss 0.6819 rollout 0.6006 static 0.8125
+[predictive s0] epoch   2 val loss 0.5869 rollout 0.5125 static 0.7435
+[predictive s0] epoch   3 val loss 0.5314 rollout 0.4618 static 0.6960
+[predictive s0] epoch   4 val loss 0.4940 rollout 0.4290 static 0.6497
+[predictive s0] epoch   5 val loss 0.4587 rollout 0.3986 static 0.6008
+[predictive s0] epoch   6 val loss 0.4367 rollout 0.3806 static 0.5604
+[predictive s0] epoch   7 val loss 0.4164 rollout 0.3634 static 0.5297
+[predictive s0] epoch   8 val loss 0.4067 rollout 0.3561 static 0.5057
+[predictive s0] epoch   9 val loss 0.3944 rollout 0.3458 static 0.4856
+[predictive s0] epoch  10 val loss 0.3872 rollout 0.3401 static 0.4706
+[predictive s0] epoch  11 val loss 0.3772 rollout 0.3319 static 0.4522
+[predictive s0] epoch  12 val loss 0.3694 rollout 0.3257 static 0.4371
+[predictive s0] epoch  13 val loss 0.3650 rollout 0.3225 static 0.4243
+[predictive s0] epoch  14 val loss 0.3580 rollout 0.3168 static 0.4119
+[predictive s0] epoch  15 val loss 0.3519 rollout 0.3118 static 0.4007
+[predictive s0] epoch  16 val loss 0.3471 rollout 0.3082 static 0.3884
+[predictive s0] epoch  17 val loss 0.3448 rollout 0.3066 static 0.3815
+[predictive s0] epoch  18 val loss 0.3425 rollout 0.3052 static 0.3735
+[predictive s0] epoch  19 val loss 0.3401 rollout 0.3035 static 0.3667
+[predictive s0] epoch  20 val loss 0.3385 rollout 0.3024 static 0.3612
+[predictive s0] epoch  21 val loss 0.3345 rollout 0.2991 static 0.3538
+[predictive s0] epoch  22 val loss 0.3335 rollout 0.2985 static 0.3500
+[predictive s0] epoch  23 val loss 0.3312 rollout 0.2967 static 0.3454
+[predictive s0] epoch  24 val loss 0.3313 rollout 0.2970 static 0.3426
+[predictive s0] epoch  25 val loss 0.3305 rollout 0.2964 static 0.3409
+[predictive s0] epoch  26 val loss 0.3290 rollout 0.2953 static 0.3369
+[predictive s0] epoch  27 val loss 0.3260 rollout 0.2927 static 0.3333
+[predictive s0] epoch  28 val loss 0.3257 rollout 0.2925 static 0.3319
+[predictive s0] epoch  29 val loss 0.3263 rollout 0.2932 static 0.3307
+[predictive s0] epoch  30 val loss 0.3253 rollout 0.2923 static 0.3300
+[predictive s0] epoch  31 val loss 0.3250 rollout 0.2923 static 0.3273
+[predictive s0] epoch  32 val loss 0.3230 rollout 0.2905 static 0.3252
+[predictive s0] epoch  33 val loss 0.3237 rollout 0.2912 static 0.3248
+[predictive s0] epoch  34 val loss 0.3226 rollout 0.2904 static 0.3226
+[predictive s0] epoch  35 val loss 0.3222 rollout 0.2900 static 0.3222
+[predictive s0] epoch  36 val loss 0.3219 rollout 0.2898 static 0.3206
+[predictive s0] epoch  37 val loss 0.3209 rollout 0.2890 static 0.3195
+[predictive s0] epoch  38 val loss 0.3210 rollout 0.2891 static 0.3189
+[predictive s0] epoch  39 val loss 0.3195 rollout 0.2878 static 0.3178
+[predictive s0] epoch  40 val loss 0.3187 rollout 0.2872 static 0.3157
+[predictive s0] epoch  41 val loss 0.3185 rollout 0.2870 static 0.3154
+[predictive s0] epoch  42 val loss 0.3174 rollout 0.2860 static 0.3145
+[predictive s0] epoch  43 val loss 0.3169 rollout 0.2856 static 0.3134
+[predictive s0] epoch  44 val loss 0.3177 rollout 0.2864 static 0.3134
+[predictive s0] epoch  45 val loss 0.3160 rollout 0.2848 static 0.3117
+[predictive s0] epoch  46 val loss 0.3157 rollout 0.2847 static 0.3104
+[predictive s0] epoch  47 val loss 0.3153 rollout 0.2842 static 0.3107
+[predictive s0] epoch  48 val loss 0.3150 rollout 0.2840 static 0.3093
+[predictive s0] epoch  49 val loss 0.3145 rollout 0.2836 static 0.3089
+[predictive s0] epoch  50 val loss 0.3145 rollout 0.2836 static 0.3088
+[predictive s0] epoch  51 val loss 0.3141 rollout 0.2833 static 0.3079
+[predictive s0] epoch  52 val loss 0.3148 rollout 0.2840 static 0.3088
+[predictive s0] epoch  53 val loss 0.3128 rollout 0.2822 static 0.3060
+[predictive s0] epoch  54 val loss 0.3123 rollout 0.2817 static 0.3061
+[predictive s0] epoch  55 val loss 0.3141 rollout 0.2833 static 0.3074
+[predictive s0] epoch  56 val loss 0.3117 rollout 0.2812 static 0.3044
+[predictive s0] epoch  57 val loss 0.3116 rollout 0.2812 static 0.3041
+[predictive s0] epoch  58 val loss 0.3107 rollout 0.2803 static 0.3039
+[predictive s0] epoch  59 val loss 0.3113 rollout 0.2809 static 0.3036
+[predictive s0] epoch  60 val loss 0.3100 rollout 0.2797 static 0.3025
+[predictive s0] epoch  61 val loss 0.3105 rollout 0.2803 static 0.3023
+[predictive s0] epoch  62 val loss 0.3098 rollout 0.2795 static 0.3027
+[predictive s0] epoch  63 val loss 0.3102 rollout 0.2800 static 0.3019
+[predictive s0] epoch  64 val loss 0.3097 rollout 0.2795 static 0.3020
+[predictive s0] epoch  65 val loss 0.3096 rollout 0.2794 static 0.3018
+[predictive s0] epoch  66 val loss 0.3098 rollout 0.2797 static 0.3008
+[predictive s0] epoch  67 val loss 0.3089 rollout 0.2788 static 0.3003
+[predictive s0] epoch  68 val loss 0.3078 rollout 0.2779 static 0.2989
+[predictive s0] epoch  69 val loss 0.3077 rollout 0.2778 static 0.2992
+[predictive s0] epoch  70 val loss 0.3071 rollout 0.2773 static 0.2981
+[predictive s0] epoch  71 val loss 0.3076 rollout 0.2778 static 0.2986
+[predictive s0] epoch  72 val loss 0.3077 rollout 0.2779 static 0.2984
+[predictive s0] epoch  73 val loss 0.3063 rollout 0.2765 static 0.2970
+[predictive s0] epoch  74 val loss 0.3076 rollout 0.2778 static 0.2974
+[predictive s0] epoch  75 val loss 0.3068 rollout 0.2770 static 0.2976
+[predictive s0] epoch  76 val loss 0.3061 rollout 0.2765 static 0.2965
+[predictive s0] epoch  77 val loss 0.3045 rollout 0.2750 static 0.2955
+[predictive s0] epoch  78 val loss 0.3055 rollout 0.2759 static 0.2953
+[predictive s0] epoch  79 val loss 0.3052 rollout 0.2757 static 0.2949
+saved runs/writer_predictive_bow_s0.pt best val 0.3045230507850647
+== 4. writer random / bow / seed 0
+[random s0] epoch   0 val loss 1.0350 rollout 0.9444 static 0.9063
+[random s0] epoch   1 val loss 0.9949 rollout 0.9108 static 0.8413
+[random s0] epoch   2 val loss 0.9588 rollout 0.8802 static 0.7858
+[random s0] epoch   3 val loss 0.9389 rollout 0.8640 static 0.7489
+[random s0] epoch   4 val loss 0.9315 rollout 0.8585 static 0.7308
+[random s0] epoch   5 val loss 0.9304 rollout 0.8580 static 0.7233
+[random s0] epoch   6 val loss 0.9309 rollout 0.8589 static 0.7202
+[random s0] epoch   7 val loss 0.9277 rollout 0.8568 static 0.7098
+[random s0] epoch   8 val loss 0.9293 rollout 0.8585 static 0.7085
+[random s0] epoch   9 val loss 0.9274 rollout 0.8569 static 0.7051
+[random s0] epoch  10 val loss 0.9297 rollout 0.8592 static 0.7048
+[random s0] epoch  11 val loss 0.9295 rollout 0.8592 static 0.7035
+[random s0] epoch  12 val loss 0.9302 rollout 0.8599 static 0.7029
+[random s0] epoch  13 val loss 0.9307 rollout 0.8605 static 0.7020
+[random s0] epoch  14 val loss 0.9320 rollout 0.8617 static 0.7024
+[random s0] epoch  15 val loss 0.9323 rollout 0.8621 static 0.7025
+[random s0] epoch  16 val loss 0.9322 rollout 0.8619 static 0.7034
+[random s0] epoch  17 val loss 0.9321 rollout 0.8618 static 0.7032
+[random s0] epoch  18 val loss 0.9328 rollout 0.8626 static 0.7024
+[random s0] epoch  19 val loss 0.9319 rollout 0.8616 static 0.7032
+saved runs/writer_random_bow_s0.pt best val 0.9274295568466187
+== 4. writer static / bow / seed 1
+[static s1] epoch   0 val loss 0.8792 rollout nan static 0.8792
+[static s1] epoch   1 val loss 0.7721 rollout nan static 0.7721
+[static s1] epoch   2 val loss 0.6627 rollout nan static 0.6627
+[static s1] epoch   3 val loss 0.5643 rollout nan static 0.5643
+[static s1] epoch   4 val loss 0.5077 rollout nan static 0.5077
+[static s1] epoch   5 val loss 0.4721 rollout nan static 0.4721
+[static s1] epoch   6 val loss 0.4484 rollout nan static 0.4484
+[static s1] epoch   7 val loss 0.4229 rollout nan static 0.4229
+[static s1] epoch   8 val loss 0.4074 rollout nan static 0.4074
+[static s1] epoch   9 val loss 0.3945 rollout nan static 0.3945
+[static s1] epoch  10 val loss 0.3806 rollout nan static 0.3806
+[static s1] epoch  11 val loss 0.3781 rollout nan static 0.3781
+[static s1] epoch  12 val loss 0.3744 rollout nan static 0.3744
+[static s1] epoch  13 val loss 0.3675 rollout nan static 0.3675
+[static s1] epoch  14 val loss 0.3639 rollout nan static 0.3639
+[static s1] epoch  15 val loss 0.3618 rollout nan static 0.3618
+[static s1] epoch  16 val loss 0.3589 rollout nan static 0.3589
+[static s1] epoch  17 val loss 0.3554 rollout nan static 0.3554
+[static s1] epoch  18 val loss 0.3514 rollout nan static 0.3514
+[static s1] epoch  19 val loss 0.3497 rollout nan static 0.3497
+[static s1] epoch  20 val loss 0.3469 rollout nan static 0.3469
+[static s1] epoch  21 val loss 0.3451 rollout nan static 0.3451
+[static s1] epoch  22 val loss 0.3441 rollout nan static 0.3441
+[static s1] epoch  23 val loss 0.3431 rollout nan static 0.3431
+[static s1] epoch  24 val loss 0.3386 rollout nan static 0.3386
+[static s1] epoch  25 val loss 0.3395 rollout nan static 0.3395
+[static s1] epoch  26 val loss 0.3361 rollout nan static 0.3361
+[static s1] epoch  27 val loss 0.3349 rollout nan static 0.3349
+[static s1] epoch  28 val loss 0.3340 rollout nan static 0.3340
+[static s1] epoch  29 val loss 0.3320 rollout nan static 0.3320
+[static s1] epoch  30 val loss 0.3310 rollout nan static 0.3310
+[static s1] epoch  31 val loss 0.3283 rollout nan static 0.3283
+[static s1] epoch  32 val loss 0.3271 rollout nan static 0.3271
+[static s1] epoch  33 val loss 0.3266 rollout nan static 0.3266
+[static s1] epoch  34 val loss 0.3256 rollout nan static 0.3256
+[static s1] epoch  35 val loss 0.3241 rollout nan static 0.3241
+[static s1] epoch  36 val loss 0.3232 rollout nan static 0.3232
+[static s1] epoch  37 val loss 0.3208 rollout nan static 0.3208
+[static s1] epoch  38 val loss 0.3206 rollout nan static 0.3206
+[static s1] epoch  39 val loss 0.3197 rollout nan static 0.3197
+[static s1] epoch  40 val loss 0.3186 rollout nan static 0.3186
+[static s1] epoch  41 val loss 0.3171 rollout nan static 0.3171
+[static s1] epoch  42 val loss 0.3162 rollout nan static 0.3162
+[static s1] epoch  43 val loss 0.3145 rollout nan static 0.3145
+[static s1] epoch  44 val loss 0.3157 rollout nan static 0.3157
+[static s1] epoch  45 val loss 0.3131 rollout nan static 0.3131
+[static s1] epoch  46 val loss 0.3131 rollout nan static 0.3131
+[static s1] epoch  47 val loss 0.3123 rollout nan static 0.3123
+[static s1] epoch  48 val loss 0.3110 rollout nan static 0.3110
+[static s1] epoch  49 val loss 0.3099 rollout nan static 0.3099
+[static s1] epoch  50 val loss 0.3088 rollout nan static 0.3088
+[static s1] epoch  51 val loss 0.3085 rollout nan static 0.3085
+[static s1] epoch  52 val loss 0.3082 rollout nan static 0.3082
+[static s1] epoch  53 val loss 0.3068 rollout nan static 0.3068
+[static s1] epoch  54 val loss 0.3069 rollout nan static 0.3069
+[static s1] epoch  55 val loss 0.3066 rollout nan static 0.3066
+[static s1] epoch  56 val loss 0.3048 rollout nan static 0.3048
+[static s1] epoch  57 val loss 0.3050 rollout nan static 0.3050
+[static s1] epoch  58 val loss 0.3035 rollout nan static 0.3035
+[static s1] epoch  59 val loss 0.3033 rollout nan static 0.3033
+[static s1] epoch  60 val loss 0.3023 rollout nan static 0.3023
+[static s1] epoch  61 val loss 0.3027 rollout nan static 0.3027
+[static s1] epoch  62 val loss 0.3027 rollout nan static 0.3027
+[static s1] epoch  63 val loss 0.3006 rollout nan static 0.3006
+[static s1] epoch  64 val loss 0.3002 rollout nan static 0.3002
+[static s1] epoch  65 val loss 0.3002 rollout nan static 0.3002
+[static s1] epoch  66 val loss 0.2987 rollout nan static 0.2987
+[static s1] epoch  67 val loss 0.2985 rollout nan static 0.2985
+[static s1] epoch  68 val loss 0.2980 rollout nan static 0.2980
+[static s1] epoch  69 val loss 0.2975 rollout nan static 0.2975
+[static s1] epoch  70 val loss 0.2968 rollout nan static 0.2968
+[static s1] epoch  71 val loss 0.2964 rollout nan static 0.2964
+[static s1] epoch  72 val loss 0.2958 rollout nan static 0.2958
+[static s1] epoch  73 val loss 0.2948 rollout nan static 0.2948
+[static s1] epoch  74 val loss 0.2936 rollout nan static 0.2936
+[static s1] epoch  75 val loss 0.2940 rollout nan static 0.2940
+[static s1] epoch  76 val loss 0.2938 rollout nan static 0.2938
+[static s1] epoch  77 val loss 0.2944 rollout nan static 0.2944
+[static s1] epoch  78 val loss 0.2940 rollout nan static 0.2940
+[static s1] epoch  79 val loss 0.2922 rollout nan static 0.2922
+saved runs/writer_static_bow_s1.pt best val 0.292233407497406
+== 4. writer predictive / bow / seed 1
+[predictive s1] epoch   0 val loss 0.8774 rollout 0.7865 static 0.9087
+[predictive s1] epoch   1 val loss 0.6836 rollout 0.6021 static 0.8143
+[predictive s1] epoch   2 val loss 0.5843 rollout 0.5099 static 0.7443
+[predictive s1] epoch   3 val loss 0.5316 rollout 0.4619 static 0.6974
+[predictive s1] epoch   4 val loss 0.4926 rollout 0.4277 static 0.6492
+[predictive s1] epoch   5 val loss 0.4593 rollout 0.3993 static 0.6000
+[predictive s1] epoch   6 val loss 0.4346 rollout 0.3788 static 0.5580
+[predictive s1] epoch   7 val loss 0.4161 rollout 0.3635 static 0.5263
+[predictive s1] epoch   8 val loss 0.4059 rollout 0.3556 static 0.5034
+[predictive s1] epoch   9 val loss 0.3937 rollout 0.3454 static 0.4832
+[predictive s1] epoch  10 val loss 0.3812 rollout 0.3350 static 0.4617
+[predictive s1] epoch  11 val loss 0.3767 rollout 0.3318 static 0.4486
+[predictive s1] epoch  12 val loss 0.3680 rollout 0.3247 static 0.4329
+[predictive s1] epoch  13 val loss 0.3613 rollout 0.3194 static 0.4192
+[predictive s1] epoch  14 val loss 0.3578 rollout 0.3170 static 0.4087
+[predictive s1] epoch  15 val loss 0.3533 rollout 0.3136 static 0.3976
+[predictive s1] epoch  16 val loss 0.3492 rollout 0.3104 static 0.3879
+[predictive s1] epoch  17 val loss 0.3451 rollout 0.3072 static 0.3792
+[predictive s1] epoch  18 val loss 0.3426 rollout 0.3054 static 0.3712
+[predictive s1] epoch  19 val loss 0.3390 rollout 0.3026 static 0.3633
+[predictive s1] epoch  20 val loss 0.3375 rollout 0.3016 static 0.3588
+[predictive s1] epoch  21 val loss 0.3350 rollout 0.2997 static 0.3534
+[predictive s1] epoch  22 val loss 0.3345 rollout 0.2995 static 0.3497
+[predictive s1] epoch  23 val loss 0.3322 rollout 0.2978 static 0.3445
+[predictive s1] epoch  24 val loss 0.3301 rollout 0.2960 static 0.3410
+[predictive s1] epoch  25 val loss 0.3292 rollout 0.2953 static 0.3388
+[predictive s1] epoch  26 val loss 0.3274 rollout 0.2939 static 0.3349
+[predictive s1] epoch  27 val loss 0.3264 rollout 0.2932 static 0.3329
+[predictive s1] epoch  28 val loss 0.3264 rollout 0.2932 static 0.3316
+[predictive s1] epoch  29 val loss 0.3264 rollout 0.2933 static 0.3305
+[predictive s1] epoch  30 val loss 0.3252 rollout 0.2924 static 0.3285
+[predictive s1] epoch  31 val loss 0.3231 rollout 0.2906 static 0.3255
+[predictive s1] epoch  32 val loss 0.3224 rollout 0.2900 static 0.3239
+[predictive s1] epoch  33 val loss 0.3214 rollout 0.2892 static 0.3222
+[predictive s1] epoch  34 val loss 0.3216 rollout 0.2894 static 0.3218
+[predictive s1] epoch  35 val loss 0.3213 rollout 0.2892 static 0.3208
+[predictive s1] epoch  36 val loss 0.3194 rollout 0.2875 static 0.3185
+[predictive s1] epoch  37 val loss 0.3190 rollout 0.2873 static 0.3177
+[predictive s1] epoch  38 val loss 0.3205 rollout 0.2887 static 0.3187
+[predictive s1] epoch  39 val loss 0.3185 rollout 0.2869 static 0.3161
+[predictive s1] epoch  40 val loss 0.3180 rollout 0.2864 static 0.3153
+[predictive s1] epoch  41 val loss 0.3176 rollout 0.2861 static 0.3145
+[predictive s1] epoch  42 val loss 0.3170 rollout 0.2857 static 0.3130
+[predictive s1] epoch  43 val loss 0.3153 rollout 0.2842 static 0.3116
+[predictive s1] epoch  44 val loss 0.3168 rollout 0.2855 static 0.3130
+[predictive s1] epoch  45 val loss 0.3152 rollout 0.2841 static 0.3103
+[predictive s1] epoch  46 val loss 0.3160 rollout 0.2848 static 0.3118
+[predictive s1] epoch  47 val loss 0.3139 rollout 0.2829 static 0.3095
+[predictive s1] epoch  48 val loss 0.3140 rollout 0.2831 static 0.3090
+[predictive s1] epoch  49 val loss 0.3139 rollout 0.2830 static 0.3085
+[predictive s1] epoch  50 val loss 0.3130 rollout 0.2823 static 0.3071
+[predictive s1] epoch  51 val loss 0.3124 rollout 0.2818 static 0.3064
+[predictive s1] epoch  52 val loss 0.3116 rollout 0.2810 static 0.3059
+[predictive s1] epoch  53 val loss 0.3132 rollout 0.2826 static 0.3065
+[predictive s1] epoch  54 val loss 0.3113 rollout 0.2808 static 0.3045
+[predictive s1] epoch  55 val loss 0.3099 rollout 0.2796 static 0.3025
+[predictive s1] epoch  56 val loss 0.3104 rollout 0.2801 static 0.3033
+[predictive s1] epoch  57 val loss 0.3104 rollout 0.2801 static 0.3029
+[predictive s1] epoch  58 val loss 0.3099 rollout 0.2796 static 0.3027
+[predictive s1] epoch  59 val loss 0.3101 rollout 0.2799 static 0.3018
+[predictive s1] epoch  60 val loss 0.3095 rollout 0.2793 static 0.3017
+[predictive s1] epoch  61 val loss 0.3095 rollout 0.2793 static 0.3021
+[predictive s1] epoch  62 val loss 0.3093 rollout 0.2791 static 0.3016
+[predictive s1] epoch  63 val loss 0.3090 rollout 0.2790 static 0.3001
+[predictive s1] epoch  64 val loss 0.3074 rollout 0.2775 static 0.2987
+[predictive s1] epoch  65 val loss 0.3085 rollout 0.2785 static 0.2999
+[predictive s1] epoch  66 val loss 0.3069 rollout 0.2771 static 0.2983
+[predictive s1] epoch  67 val loss 0.3070 rollout 0.2772 static 0.2982
+[predictive s1] epoch  68 val loss 0.3066 rollout 0.2768 static 0.2978
+[predictive s1] epoch  69 val loss 0.3074 rollout 0.2776 static 0.2982
+[predictive s1] epoch  70 val loss 0.3068 rollout 0.2771 static 0.2974
+[predictive s1] epoch  71 val loss 0.3052 rollout 0.2757 static 0.2958
+[predictive s1] epoch  72 val loss 0.3063 rollout 0.2766 static 0.2971
+[predictive s1] epoch  73 val loss 0.3056 rollout 0.2760 static 0.2963
+[predictive s1] epoch  74 val loss 0.3055 rollout 0.2758 static 0.2966
+[predictive s1] epoch  75 val loss 0.3054 rollout 0.2759 static 0.2952
+[predictive s1] epoch  76 val loss 0.3041 rollout 0.2747 static 0.2947
+[predictive s1] epoch  77 val loss 0.3050 rollout 0.2756 static 0.2946
+[predictive s1] epoch  78 val loss 0.3044 rollout 0.2750 static 0.2948
+[predictive s1] epoch  79 val loss 0.3041 rollout 0.2747 static 0.2938
+saved runs/writer_predictive_bow_s1.pt best val 0.3040941059589386
+== 4. writer random / bow / seed 1
+[random s1] epoch   0 val loss 1.0357 rollout 0.9452 static 0.9051
+[random s1] epoch   1 val loss 0.9977 rollout 0.9133 static 0.8436
+[random s1] epoch   2 val loss 0.9616 rollout 0.8828 static 0.7875
+[random s1] epoch   3 val loss 0.9413 rollout 0.8661 static 0.7527
+[random s1] epoch   4 val loss 0.9328 rollout 0.8592 static 0.7356
+[random s1] epoch   5 val loss 0.9296 rollout 0.8573 static 0.7226
+[random s1] epoch   6 val loss 0.9310 rollout 0.8593 static 0.7170
+[random s1] epoch   7 val loss 0.9290 rollout 0.8577 static 0.7126
+[random s1] epoch   8 val loss 0.9288 rollout 0.8581 static 0.7080
+[random s1] epoch   9 val loss 0.9288 rollout 0.8581 static 0.7074
+[random s1] epoch  10 val loss 0.9300 rollout 0.8596 static 0.7043
+[random s1] epoch  11 val loss 0.9298 rollout 0.8594 static 0.7038
+[random s1] epoch  12 val loss 0.9296 rollout 0.8595 static 0.7014
+[random s1] epoch  13 val loss 0.9317 rollout 0.8615 static 0.7028
+[random s1] epoch  14 val loss 0.9319 rollout 0.8618 static 0.7019
+[random s1] epoch  15 val loss 0.9316 rollout 0.8616 static 0.7003
+[random s1] epoch  16 val loss 0.9319 rollout 0.8619 static 0.6998
+[random s1] epoch  17 val loss 0.9326 rollout 0.8624 static 0.7018
+[random s1] epoch  18 val loss 0.9327 rollout 0.8627 static 0.7003
+[random s1] epoch  19 val loss 0.9325 rollout 0.8623 static 0.7012
+saved runs/writer_random_bow_s1.pt best val 0.9288238286972046
+== 4. writer static / bow / seed 2
+[static s2] epoch   0 val loss 0.8782 rollout nan static 0.8782
+[static s2] epoch   1 val loss 0.7724 rollout nan static 0.7724
+[static s2] epoch   2 val loss 0.6548 rollout nan static 0.6548
+[static s2] epoch   3 val loss 0.5640 rollout nan static 0.5640
+[static s2] epoch   4 val loss 0.5050 rollout nan static 0.5050
+[static s2] epoch   5 val loss 0.4743 rollout nan static 0.4743
+[static s2] epoch   6 val loss 0.4469 rollout nan static 0.4469
+[static s2] epoch   7 val loss 0.4228 rollout nan static 0.4228
+[static s2] epoch   8 val loss 0.4069 rollout nan static 0.4069
+[static s2] epoch   9 val loss 0.3956 rollout nan static 0.3956
+[static s2] epoch  10 val loss 0.3858 rollout nan static 0.3858
+[static s2] epoch  11 val loss 0.3815 rollout nan static 0.3815
+[static s2] epoch  12 val loss 0.3758 rollout nan static 0.3758
+[static s2] epoch  13 val loss 0.3712 rollout nan static 0.3712
+[static s2] epoch  14 val loss 0.3676 rollout nan static 0.3676
+[static s2] epoch  15 val loss 0.3627 rollout nan static 0.3627
+[static s2] epoch  16 val loss 0.3619 rollout nan static 0.3619
+[static s2] epoch  17 val loss 0.3577 rollout nan static 0.3577
+[static s2] epoch  18 val loss 0.3572 rollout nan static 0.3572
+[static s2] epoch  19 val loss 0.3558 rollout nan static 0.3558
+[static s2] epoch  20 val loss 0.3523 rollout nan static 0.3523
+[static s2] epoch  21 val loss 0.3487 rollout nan static 0.3487
+[static s2] epoch  22 val loss 0.3472 rollout nan static 0.3472
+[static s2] epoch  23 val loss 0.3469 rollout nan static 0.3469
+[static s2] epoch  24 val loss 0.3439 rollout nan static 0.3439
+[static s2] epoch  25 val loss 0.3415 rollout nan static 0.3415
+[static s2] epoch  26 val loss 0.3406 rollout nan static 0.3406
+[static s2] epoch  27 val loss 0.3388 rollout nan static 0.3388
+[static s2] epoch  28 val loss 0.3379 rollout nan static 0.3379
+[static s2] epoch  29 val loss 0.3361 rollout nan static 0.3361
+[static s2] epoch  30 val loss 0.3345 rollout nan static 0.3345
+[static s2] epoch  31 val loss 0.3343 rollout nan static 0.3343
+[static s2] epoch  32 val loss 0.3317 rollout nan static 0.3317
+[static s2] epoch  33 val loss 0.3308 rollout nan static 0.3308
+[static s2] epoch  34 val loss 0.3286 rollout nan static 0.3286
+[static s2] epoch  35 val loss 0.3286 rollout nan static 0.3286
+[static s2] epoch  36 val loss 0.3274 rollout nan static 0.3274
+[static s2] epoch  37 val loss 0.3244 rollout nan static 0.3244
+[static s2] epoch  38 val loss 0.3245 rollout nan static 0.3245
+[static s2] epoch  39 val loss 0.3247 rollout nan static 0.3247
+[static s2] epoch  40 val loss 0.3233 rollout nan static 0.3233
+[static s2] epoch  41 val loss 0.3224 rollout nan static 0.3224
+[static s2] epoch  42 val loss 0.3206 rollout nan static 0.3206
+[static s2] epoch  43 val loss 0.3195 rollout nan static 0.3195
+[static s2] epoch  44 val loss 0.3200 rollout nan static 0.3200
+[static s2] epoch  45 val loss 0.3178 rollout nan static 0.3178
+[static s2] epoch  46 val loss 0.3173 rollout nan static 0.3173
+[static s2] epoch  47 val loss 0.3170 rollout nan static 0.3170
+[static s2] epoch  48 val loss 0.3162 rollout nan static 0.3162
+[static s2] epoch  49 val loss 0.3143 rollout nan static 0.3143
+[static s2] epoch  50 val loss 0.3138 rollout nan static 0.3138
+[static s2] epoch  51 val loss 0.3142 rollout nan static 0.3142
+[static s2] epoch  52 val loss 0.3127 rollout nan static 0.3127
+[static s2] epoch  53 val loss 0.3117 rollout nan static 0.3117
+[static s2] epoch  54 val loss 0.3101 rollout nan static 0.3101
+[static s2] epoch  55 val loss 0.3099 rollout nan static 0.3099
+[static s2] epoch  56 val loss 0.3104 rollout nan static 0.3104
+[static s2] epoch  57 val loss 0.3081 rollout nan static 0.3081
+[static s2] epoch  58 val loss 0.3082 rollout nan static 0.3082
+[static s2] epoch  59 val loss 0.3075 rollout nan static 0.3075
+[static s2] epoch  60 val loss 0.3071 rollout nan static 0.3071
+[static s2] epoch  61 val loss 0.3058 rollout nan static 0.3058
+[static s2] epoch  62 val loss 0.3058 rollout nan static 0.3058
+[static s2] epoch  63 val loss 0.3051 rollout nan static 0.3051
+[static s2] epoch  64 val loss 0.3049 rollout nan static 0.3049
+[static s2] epoch  65 val loss 0.3050 rollout nan static 0.3050
+[static s2] epoch  66 val loss 0.3031 rollout nan static 0.3031
+[static s2] epoch  67 val loss 0.3032 rollout nan static 0.3032
+[static s2] epoch  68 val loss 0.3016 rollout nan static 0.3016
+[static s2] epoch  69 val loss 0.3005 rollout nan static 0.3005
+[static s2] epoch  70 val loss 0.2994 rollout nan static 0.2994
+[static s2] epoch  71 val loss 0.3005 rollout nan static 0.3005
+[static s2] epoch  72 val loss 0.2986 rollout nan static 0.2986
+[static s2] epoch  73 val loss 0.2987 rollout nan static 0.2987
+[static s2] epoch  74 val loss 0.2991 rollout nan static 0.2991
+[static s2] epoch  75 val loss 0.2968 rollout nan static 0.2968
+[static s2] epoch  76 val loss 0.2973 rollout nan static 0.2973
+[static s2] epoch  77 val loss 0.2972 rollout nan static 0.2972
+[static s2] epoch  78 val loss 0.2955 rollout nan static 0.2955
+[static s2] epoch  79 val loss 0.2962 rollout nan static 0.2962
+saved runs/writer_static_bow_s2.pt best val 0.295488566160202
+== 4. writer predictive / bow / seed 2
+[predictive s2] epoch   0 val loss 0.8743 rollout 0.7837 static 0.9061
+[predictive s2] epoch   1 val loss 0.6842 rollout 0.6029 static 0.8134
+[predictive s2] epoch   2 val loss 0.5851 rollout 0.5107 static 0.7434
+[predictive s2] epoch   3 val loss 0.5312 rollout 0.4617 static 0.6950
+[predictive s2] epoch   4 val loss 0.4917 rollout 0.4268 static 0.6481
+[predictive s2] epoch   5 val loss 0.4557 rollout 0.3960 static 0.5975
+[predictive s2] epoch   6 val loss 0.4323 rollout 0.3768 static 0.5553
+[predictive s2] epoch   7 val loss 0.4148 rollout 0.3623 static 0.5257
+[predictive s2] epoch   8 val loss 0.4010 rollout 0.3510 static 0.4997
+[predictive s2] epoch   9 val loss 0.3896 rollout 0.3415 static 0.4808
+[predictive s2] epoch  10 val loss 0.3815 rollout 0.3354 static 0.4616
+[predictive s2] epoch  11 val loss 0.3750 rollout 0.3303 static 0.4479
+[predictive s2] epoch  12 val loss 0.3673 rollout 0.3240 static 0.4324
+[predictive s2] epoch  13 val loss 0.3607 rollout 0.3188 static 0.4192
+[predictive s2] epoch  14 val loss 0.3573 rollout 0.3164 static 0.4086
+[predictive s2] epoch  15 val loss 0.3501 rollout 0.3105 static 0.3955
+[predictive s2] epoch  16 val loss 0.3466 rollout 0.3079 static 0.3865
+[predictive s2] epoch  17 val loss 0.3446 rollout 0.3068 static 0.3783
+[predictive s2] epoch  18 val loss 0.3409 rollout 0.3038 static 0.3708
+[predictive s2] epoch  19 val loss 0.3383 rollout 0.3019 static 0.3641
+[predictive s2] epoch  20 val loss 0.3377 rollout 0.3018 static 0.3590
+[predictive s2] epoch  21 val loss 0.3335 rollout 0.2983 static 0.3525
+[predictive s2] epoch  22 val loss 0.3334 rollout 0.2986 static 0.3488
+[predictive s2] epoch  23 val loss 0.3312 rollout 0.2968 static 0.3449
+[predictive s2] epoch  24 val loss 0.3306 rollout 0.2964 static 0.3419
+[predictive s2] epoch  25 val loss 0.3280 rollout 0.2942 static 0.3381
+[predictive s2] epoch  26 val loss 0.3272 rollout 0.2936 static 0.3360
+[predictive s2] epoch  27 val loss 0.3263 rollout 0.2930 static 0.3328
+[predictive s2] epoch  28 val loss 0.3265 rollout 0.2933 static 0.3320
+[predictive s2] epoch  29 val loss 0.3244 rollout 0.2915 static 0.3289
+[predictive s2] epoch  30 val loss 0.3240 rollout 0.2912 static 0.3276
+[predictive s2] epoch  31 val loss 0.3244 rollout 0.2917 static 0.3268
+[predictive s2] epoch  32 val loss 0.3240 rollout 0.2914 static 0.3264
+[predictive s2] epoch  33 val loss 0.3205 rollout 0.2882 static 0.3223
+[predictive s2] epoch  34 val loss 0.3213 rollout 0.2891 static 0.3217
+[predictive s2] epoch  35 val loss 0.3219 rollout 0.2897 static 0.3221
+[predictive s2] epoch  36 val loss 0.3205 rollout 0.2885 static 0.3197
+[predictive s2] epoch  37 val loss 0.3196 rollout 0.2878 static 0.3176
+[predictive s2] epoch  38 val loss 0.3202 rollout 0.2885 static 0.3178
+[predictive s2] epoch  39 val loss 0.3189 rollout 0.2872 static 0.3171
+[predictive s2] epoch  40 val loss 0.3184 rollout 0.2869 static 0.3158
+[predictive s2] epoch  41 val loss 0.3183 rollout 0.2868 static 0.3151
+[predictive s2] epoch  42 val loss 0.3179 rollout 0.2864 static 0.3142
+[predictive s2] epoch  43 val loss 0.3178 rollout 0.2864 static 0.3139
+[predictive s2] epoch  44 val loss 0.3179 rollout 0.2864 static 0.3145
+[predictive s2] epoch  45 val loss 0.3159 rollout 0.2848 static 0.3111
+[predictive s2] epoch  46 val loss 0.3158 rollout 0.2847 static 0.3113
+[predictive s2] epoch  47 val loss 0.3163 rollout 0.2852 static 0.3110
+[predictive s2] epoch  48 val loss 0.3164 rollout 0.2853 static 0.3111
+[predictive s2] epoch  49 val loss 0.3147 rollout 0.2838 static 0.3092
+[predictive s2] epoch  50 val loss 0.3146 rollout 0.2838 static 0.3081
+[predictive s2] epoch  51 val loss 0.3141 rollout 0.2832 static 0.3090
+[predictive s2] epoch  52 val loss 0.3144 rollout 0.2836 static 0.3077
+[predictive s2] epoch  53 val loss 0.3123 rollout 0.2816 static 0.3063
+[predictive s2] epoch  54 val loss 0.3129 rollout 0.2822 static 0.3062
+[predictive s2] epoch  55 val loss 0.3128 rollout 0.2822 static 0.3059
+[predictive s2] epoch  56 val loss 0.3124 rollout 0.2818 static 0.3054
+[predictive s2] epoch  57 val loss 0.3115 rollout 0.2811 static 0.3040
+[predictive s2] epoch  58 val loss 0.3121 rollout 0.2816 static 0.3052
+[predictive s2] epoch  59 val loss 0.3114 rollout 0.2810 static 0.3044
+[predictive s2] epoch  60 val loss 0.3105 rollout 0.2802 static 0.3030
+[predictive s2] epoch  61 val loss 0.3101 rollout 0.2798 static 0.3022
+[predictive s2] epoch  62 val loss 0.3097 rollout 0.2795 static 0.3024
+[predictive s2] epoch  63 val loss 0.3100 rollout 0.2797 static 0.3021
+[predictive s2] epoch  64 val loss 0.3101 rollout 0.2800 static 0.3015
+[predictive s2] epoch  65 val loss 0.3097 rollout 0.2795 static 0.3017
+[predictive s2] epoch  66 val loss 0.3085 rollout 0.2786 static 0.2995
+[predictive s2] epoch  67 val loss 0.3085 rollout 0.2785 static 0.2999
+[predictive s2] epoch  68 val loss 0.3078 rollout 0.2780 static 0.2982
+[predictive s2] epoch  69 val loss 0.3078 rollout 0.2779 static 0.2997
+[predictive s2] epoch  70 val loss 0.3081 rollout 0.2783 static 0.2984
+[predictive s2] epoch  71 val loss 0.3079 rollout 0.2780 static 0.2992
+[predictive s2] epoch  72 val loss 0.3069 rollout 0.2772 static 0.2977
+[predictive s2] epoch  73 val loss 0.3066 rollout 0.2769 static 0.2967
+[predictive s2] epoch  74 val loss 0.3073 rollout 0.2774 static 0.2989
+[predictive s2] epoch  75 val loss 0.3065 rollout 0.2768 static 0.2970
+[predictive s2] epoch  76 val loss 0.3068 rollout 0.2772 static 0.2966
+[predictive s2] epoch  77 val loss 0.3051 rollout 0.2756 static 0.2952
+[predictive s2] epoch  78 val loss 0.3052 rollout 0.2758 static 0.2948
+[predictive s2] epoch  79 val loss 0.3049 rollout 0.2754 static 0.2953
+saved runs/writer_predictive_bow_s2.pt best val 0.3049200475215912
+== 4. writer random / bow / seed 2
+[random s2] epoch   0 val loss 1.0366 rollout 0.9461 static 0.9047
+[random s2] epoch   1 val loss 0.9982 rollout 0.9139 static 0.8432
+[random s2] epoch   2 val loss 0.9624 rollout 0.8834 static 0.7892
+[random s2] epoch   3 val loss 0.9406 rollout 0.8655 static 0.7502
+[random s2] epoch   4 val loss 0.9346 rollout 0.8612 static 0.7336
+[random s2] epoch   5 val loss 0.9323 rollout 0.8599 static 0.7242
+[random s2] epoch   6 val loss 0.9318 rollout 0.8602 static 0.7163
+[random s2] epoch   7 val loss 0.9294 rollout 0.8583 static 0.7105
+[random s2] epoch   8 val loss 0.9303 rollout 0.8596 static 0.7078
+[random s2] epoch   9 val loss 0.9315 rollout 0.8606 static 0.7091
+[random s2] epoch  10 val loss 0.9312 rollout 0.8606 static 0.7059
+[random s2] epoch  11 val loss 0.9328 rollout 0.8623 static 0.7053
+[random s2] epoch  12 val loss 0.9327 rollout 0.8624 static 0.7034
+[random s2] epoch  13 val loss 0.9346 rollout 0.8640 static 0.7055
+[random s2] epoch  14 val loss 0.9343 rollout 0.8640 static 0.7035
+[random s2] epoch  15 val loss 0.9337 rollout 0.8633 static 0.7040
+[random s2] epoch  16 val loss 0.9350 rollout 0.8647 static 0.7036
+[random s2] epoch  17 val loss 0.9354 rollout 0.8651 static 0.7032
+saved runs/writer_random_bow_s2.pt best val 0.9293591380119324
+== 5. evaluate: bow
+{'train': 13440, 'val': 4800, 'test_seen': 4800, 'test_unseen': 4800} rows per group
+[seed 0] static            z0 retrieval@1 0.439  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 0] predictive        z0 retrieval@1 0.440  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.18
+[seed 0] random_writer     z0 retrieval@1 0.150  err/persist seen: 0.79 0.70 0.66 0.65 0.65 0.65 0.65 0.66 | unseen: 0.77 0.69 0.67 0.66 0.66 0.66 0.67 0.67
+[seed 0] pred_state_randP  z0 retrieval@1 0.440  err/persist seen: 0.97 0.93 0.92 0.92 0.93 0.94 0.96 0.98 | unseen: 0.97 0.93 0.93 0.93 0.94 0.95 0.97 0.99
+[seed 0] pred_state_shufA  z0 retrieval@1 0.440  err/persist seen: 1.14 1.10 1.06 1.05 1.05 1.05 1.03 1.03 | unseen: 1.12 1.09 1.06 1.06 1.06 1.05 1.05 1.04
+[seed 0] probes done: a_text
+[seed 0] probes done: b_writer_state
+[seed 0] probes done: c_rollout_pred
+[seed 0] probes done: c_rollout_stat
+[seed 0] probes done: e1_state_randP
+[seed 0] probes done: e2_state_shufA
+[seed 0] probes done: e3_randwriter
+[seed 0] probes done: d_priv_start
+[seed 0] probes done: f_priv_future
+[seed 1] static            z0 retrieval@1 0.445  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 1] predictive        z0 retrieval@1 0.443  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 1] random_writer     z0 retrieval@1 0.161  err/persist seen: 0.79 0.70 0.66 0.65 0.65 0.65 0.66 0.66 | unseen: 0.78 0.69 0.67 0.66 0.66 0.67 0.67 0.68
+[seed 1] pred_state_randP  z0 retrieval@1 0.443  err/persist seen: 0.97 0.93 0.92 0.93 0.94 0.96 0.98 1.01 | unseen: 0.97 0.94 0.93 0.94 0.95 0.97 0.99 1.01
+[seed 1] pred_state_shufA  z0 retrieval@1 0.443  err/persist seen: 1.14 1.10 1.06 1.05 1.05 1.05 1.03 1.03 | unseen: 1.12 1.09 1.06 1.06 1.06 1.05 1.05 1.04
+[seed 1] probes done: a_text
+[seed 1] probes done: b_writer_state
+[seed 1] probes done: c_rollout_pred
+[seed 1] probes done: c_rollout_stat
+[seed 1] probes done: e1_state_randP
+[seed 1] probes done: e2_state_shufA
+[seed 1] probes done: e3_randwriter
+[seed 1] probes done: d_priv_start
+[seed 1] probes done: f_priv_future
+[seed 2] static            z0 retrieval@1 0.433  err/persist seen: 0.27 0.22 0.20 0.20 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.19
+[seed 2] predictive        z0 retrieval@1 0.449  err/persist seen: 0.27 0.22 0.20 0.19 0.19 0.19 0.19 0.19 | unseen: 0.26 0.22 0.20 0.19 0.19 0.19 0.19 0.18
+[seed 2] random_writer     z0 retrieval@1 0.145  err/persist seen: 0.79 0.69 0.66 0.65 0.65 0.65 0.65 0.66 | unseen: 0.77 0.69 0.67 0.66 0.66 0.66 0.67 0.67
+[seed 2] pred_state_randP  z0 retrieval@1 0.449  err/persist seen: 0.97 0.93 0.92 0.92 0.93 0.94 0.96 0.98 | unseen: 0.96 0.93 0.92 0.93 0.94 0.95 0.97 0.99
+[seed 2] pred_state_shufA  z0 retrieval@1 0.449  err/persist seen: 1.14 1.10 1.06 1.05 1.05 1.05 1.03 1.03 | unseen: 1.11 1.09 1.06 1.06 1.06 1.05 1.05 1.04
+[seed 2] probes done: a_text
+[seed 2] probes done: b_writer_state
+[seed 2] probes done: c_rollout_pred
+[seed 2] probes done: c_rollout_stat
+[seed 2] probes done: e1_state_randP
+[seed 2] probes done: e2_state_shufA
+[seed 2] probes done: e3_randwriter
+[seed 2] probes done: d_priv_start
+[seed 2] probes done: f_priv_future
+wrote results/bow/report.md
+== 3. text features: hf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|                                                                                                                      | 0/290 [00:00<?, ?it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 290/290 [00:00<00:00, 15587.81it/s]
+64/12000
+1344/12000
+2624/12000
+3904/12000
+5184/12000
+6464/12000
+7744/12000
+9024/12000
+10304/12000
+11584/12000
+saved runs/text_hf.pt (12000, 2688)
+== 4. writer static / hf / seed 0
+[static s0] epoch   0 val loss 0.8840 rollout nan static 0.8840
+[static s0] epoch   1 val loss 0.8388 rollout nan static 0.8388
+[static s0] epoch   2 val loss 0.8062 rollout nan static 0.8062
+[static s0] epoch   3 val loss 0.7842 rollout nan static 0.7842
+[static s0] epoch   4 val loss 0.7616 rollout nan static 0.7616
+[static s0] epoch   5 val loss 0.7416 rollout nan static 0.7416
+[static s0] epoch   6 val loss 0.7251 rollout nan static 0.7251
+[static s0] epoch   7 val loss 0.7243 rollout nan static 0.7243
+[static s0] epoch   8 val loss 0.7070 rollout nan static 0.7070
+[static s0] epoch   9 val loss 0.7041 rollout nan static 0.7041
+[static s0] epoch  10 val loss 0.6933 rollout nan static 0.6933
+[static s0] epoch  11 val loss 0.6909 rollout nan static 0.6909
+[static s0] epoch  12 val loss 0.6857 rollout nan static 0.6857
+[static s0] epoch  13 val loss 0.6806 rollout nan static 0.6806
+[static s0] epoch  14 val loss 0.6809 rollout nan static 0.6809
+[static s0] epoch  15 val loss 0.6807 rollout nan static 0.6807
+[static s0] epoch  16 val loss 0.6727 rollout nan static 0.6727
+[static s0] epoch  17 val loss 0.6784 rollout nan static 0.6784
+[static s0] epoch  18 val loss 0.6765 rollout nan static 0.6765
+[static s0] epoch  19 val loss 0.6777 rollout nan static 0.6777
+[static s0] epoch  20 val loss 0.6772 rollout nan static 0.6772
+[static s0] epoch  21 val loss 0.6745 rollout nan static 0.6745
+[static s0] epoch  22 val loss 0.6779 rollout nan static 0.6779
+[static s0] epoch  23 val loss 0.6766 rollout nan static 0.6766
+[static s0] epoch  24 val loss 0.6794 rollout nan static 0.6794
+[static s0] epoch  25 val loss 0.6793 rollout nan static 0.6793
+[static s0] epoch  26 val loss 0.6771 rollout nan static 0.6771
+saved runs/writer_static_hf_s0.pt best val 0.6727397441864014
+== 4. writer predictive / hf / seed 0
+[predictive s0] epoch   0 val loss 0.9214 rollout 0.8305 static 0.9094
+[predictive s0] epoch   1 val loss 0.8636 rollout 0.7762 static 0.8738
+[predictive s0] epoch   2 val loss 0.8180 rollout 0.7333 static 0.8467
+[predictive s0] epoch   3 val loss 0.7971 rollout 0.7143 static 0.8271
+[predictive s0] epoch   4 val loss 0.7668 rollout 0.6861 static 0.8073
+[predictive s0] epoch   5 val loss 0.7587 rollout 0.6797 static 0.7902
+[predictive s0] epoch   6 val loss 0.7314 rollout 0.6541 static 0.7729
+[predictive s0] epoch   7 val loss 0.7392 rollout 0.6623 static 0.7683
+[predictive s0] epoch   8 val loss 0.7057 rollout 0.6310 static 0.7475
+[predictive s0] epoch   9 val loss 0.7020 rollout 0.6282 static 0.7381
+[predictive s0] epoch  10 val loss 0.6904 rollout 0.6175 static 0.7283
+[predictive s0] epoch  11 val loss 0.6897 rollout 0.6175 static 0.7224
+[predictive s0] epoch  12 val loss 0.6836 rollout 0.6120 static 0.7165
+[predictive s0] epoch  13 val loss 0.6792 rollout 0.6083 static 0.7088
+[predictive s0] epoch  14 val loss 0.6768 rollout 0.6063 static 0.7048
+[predictive s0] epoch  15 val loss 0.6814 rollout 0.6109 static 0.7040
+[predictive s0] epoch  16 val loss 0.6736 rollout 0.6038 static 0.6981
+[predictive s0] epoch  17 val loss 0.6654 rollout 0.5963 static 0.6909
+[predictive s0] epoch  18 val loss 0.6703 rollout 0.6010 static 0.6927
+[predictive s0] epoch  19 val loss 0.6757 rollout 0.6064 static 0.6929
+[predictive s0] epoch  20 val loss 0.6657 rollout 0.5971 static 0.6861
+[predictive s0] epoch  21 val loss 0.6707 rollout 0.6021 static 0.6856
+[predictive s0] epoch  22 val loss 0.6717 rollout 0.6030 static 0.6868
+[predictive s0] epoch  23 val loss 0.6742 rollout 0.6053 static 0.6885
+[predictive s0] epoch  24 val loss 0.6772 rollout 0.6084 static 0.6877
+[predictive s0] epoch  25 val loss 0.6796 rollout 0.6109 static 0.6872
+[predictive s0] epoch  26 val loss 0.6741 rollout 0.6056 static 0.6849
+[predictive s0] epoch  27 val loss 0.6697 rollout 0.6016 static 0.6803
+saved runs/writer_predictive_hf_s0.pt best val 0.6654119491577148
+== 4. writer random / hf / seed 0
+[random s0] epoch   0 val loss 1.0472 rollout 0.9558 static 0.9141
+[random s0] epoch   1 val loss 1.0340 rollout 0.9449 static 0.8906
+[random s0] epoch   2 val loss 1.0275 rollout 0.9398 static 0.8770
+[random s0] epoch   3 val loss 1.0271 rollout 0.9404 static 0.8670
+[random s0] epoch   4 val loss 1.0224 rollout 0.9366 static 0.8586
+[random s0] epoch   5 val loss 1.0243 rollout 0.9383 static 0.8592
+[random s0] epoch   6 val loss 1.0267 rollout 0.9411 static 0.8563
+[random s0] epoch   7 val loss 1.0304 rollout 0.9445 static 0.8584
+[random s0] epoch   8 val loss 1.0328 rollout 0.9471 static 0.8567
+[random s0] epoch   9 val loss 1.0393 rollout 0.9529 static 0.8636
+[random s0] epoch  10 val loss 1.0424 rollout 0.9561 static 0.8628
+[random s0] epoch  11 val loss 1.0436 rollout 0.9574 static 0.8623
+[random s0] epoch  12 val loss 1.0495 rollout 0.9629 static 0.8666
+[random s0] epoch  13 val loss 1.0518 rollout 0.9653 static 0.8650
+[random s0] epoch  14 val loss 1.0593 rollout 0.9720 static 0.8733
+saved runs/writer_random_hf_s0.pt best val 1.0224475860595703
+== 4. writer static / hf / seed 1
+[static s1] epoch   0 val loss 0.8861 rollout nan static 0.8861
+[static s1] epoch   1 val loss 0.8409 rollout nan static 0.8409
+[static s1] epoch   2 val loss 0.8068 rollout nan static 0.8068
+[static s1] epoch   3 val loss 0.7819 rollout nan static 0.7819
+[static s1] epoch   4 val loss 0.7610 rollout nan static 0.7610
+[static s1] epoch   5 val loss 0.7405 rollout nan static 0.7405
+[static s1] epoch   6 val loss 0.7301 rollout nan static 0.7301
+[static s1] epoch   7 val loss 0.7209 rollout nan static 0.7209
+[static s1] epoch   8 val loss 0.7142 rollout nan static 0.7142
+[static s1] epoch   9 val loss 0.7059 rollout nan static 0.7059
+[static s1] epoch  10 val loss 0.6938 rollout nan static 0.6938
+[static s1] epoch  11 val loss 0.6936 rollout nan static 0.6936
+[static s1] epoch  12 val loss 0.6893 rollout nan static 0.6893
+[static s1] epoch  13 val loss 0.6875 rollout nan static 0.6875
+[static s1] epoch  14 val loss 0.6801 rollout nan static 0.6801
+[static s1] epoch  15 val loss 0.6795 rollout nan static 0.6795
+[static s1] epoch  16 val loss 0.6784 rollout nan static 0.6784
+[static s1] epoch  17 val loss 0.6751 rollout nan static 0.6751
+[static s1] epoch  18 val loss 0.6769 rollout nan static 0.6769
+[static s1] epoch  19 val loss 0.6785 rollout nan static 0.6785
+[static s1] epoch  20 val loss 0.6787 rollout nan static 0.6787
+[static s1] epoch  21 val loss 0.6773 rollout nan static 0.6773
+[static s1] epoch  22 val loss 0.6757 rollout nan static 0.6757
+[static s1] epoch  23 val loss 0.6754 rollout nan static 0.6754
+[static s1] epoch  24 val loss 0.6765 rollout nan static 0.6765
+[static s1] epoch  25 val loss 0.6760 rollout nan static 0.6760
+[static s1] epoch  26 val loss 0.6775 rollout nan static 0.6775
+[static s1] epoch  27 val loss 0.6792 rollout nan static 0.6792
+saved runs/writer_static_hf_s1.pt best val 0.6751068830490112
+== 4. writer predictive / hf / seed 1
+[predictive s1] epoch   0 val loss 0.9221 rollout 0.8310 static 0.9106
+[predictive s1] epoch   1 val loss 0.8611 rollout 0.7738 static 0.8724
+[predictive s1] epoch   2 val loss 0.8234 rollout 0.7388 static 0.8464
+[predictive s1] epoch   3 val loss 0.7885 rollout 0.7058 static 0.8267
+[predictive s1] epoch   4 val loss 0.7681 rollout 0.6875 static 0.8062
+[predictive s1] epoch   5 val loss 0.7466 rollout 0.6678 static 0.7879
+[predictive s1] epoch   6 val loss 0.7260 rollout 0.6489 static 0.7709
+[predictive s1] epoch   7 val loss 0.7136 rollout 0.6379 static 0.7570
+[predictive s1] epoch   8 val loss 0.7053 rollout 0.6305 static 0.7479
+[predictive s1] epoch   9 val loss 0.6996 rollout 0.6257 static 0.7388
+[predictive s1] epoch  10 val loss 0.6930 rollout 0.6199 static 0.7311
+[predictive s1] epoch  11 val loss 0.6884 rollout 0.6162 static 0.7229
+[predictive s1] epoch  12 val loss 0.6747 rollout 0.6033 static 0.7140
+[predictive s1] epoch  13 val loss 0.6733 rollout 0.6026 static 0.7077
+[predictive s1] epoch  14 val loss 0.6723 rollout 0.6020 static 0.7029
+[predictive s1] epoch  15 val loss 0.6733 rollout 0.6031 static 0.7025
+[predictive s1] epoch  16 val loss 0.6720 rollout 0.6022 static 0.6981
+[predictive s1] epoch  17 val loss 0.6699 rollout 0.6005 static 0.6941
+[predictive s1] epoch  18 val loss 0.6722 rollout 0.6028 static 0.6938
+[predictive s1] epoch  19 val loss 0.6646 rollout 0.5956 static 0.6897
+[predictive s1] epoch  20 val loss 0.6651 rollout 0.5964 static 0.6869
+[predictive s1] epoch  21 val loss 0.6681 rollout 0.5994 static 0.6875
+[predictive s1] epoch  22 val loss 0.6684 rollout 0.5997 static 0.6869
+[predictive s1] epoch  23 val loss 0.6654 rollout 0.5971 static 0.6829
+[predictive s1] epoch  24 val loss 0.6740 rollout 0.6054 static 0.6858
+[predictive s1] epoch  25 val loss 0.6713 rollout 0.6029 static 0.6844
+[predictive s1] epoch  26 val loss 0.6698 rollout 0.6015 static 0.6824
+[predictive s1] epoch  27 val loss 0.6714 rollout 0.6033 static 0.6809
+[predictive s1] epoch  28 val loss 0.6779 rollout 0.6092 static 0.6868
+[predictive s1] epoch  29 val loss 0.6705 rollout 0.6024 static 0.6808
+saved runs/writer_predictive_hf_s1.pt best val 0.6645829081535339
+== 4. writer random / hf / seed 1
+[random s1] epoch   0 val loss 1.0473 rollout 0.9559 static 0.9145
+[random s1] epoch   1 val loss 1.0361 rollout 0.9467 static 0.8940
+[random s1] epoch   2 val loss 1.0287 rollout 0.9410 static 0.8769
+[random s1] epoch   3 val loss 1.0258 rollout 0.9389 static 0.8691
+[random s1] epoch   4 val loss 1.0255 rollout 0.9392 static 0.8624
+[random s1] epoch   5 val loss 1.0256 rollout 0.9398 static 0.8584
+[random s1] epoch   6 val loss 1.0280 rollout 0.9424 static 0.8562
+[random s1] epoch   7 val loss 1.0295 rollout 0.9436 static 0.8587
+[random s1] epoch   8 val loss 1.0383 rollout 0.9521 static 0.8622
+[random s1] epoch   9 val loss 1.0392 rollout 0.9529 static 0.8630
+[random s1] epoch  10 val loss 1.0436 rollout 0.9571 static 0.8647
+[random s1] epoch  11 val loss 1.0473 rollout 0.9604 static 0.8694
+[random s1] epoch  12 val loss 1.0517 rollout 0.9648 static 0.8687
+[random s1] epoch  13 val loss 1.0560 rollout 0.9687 static 0.8733
+[random s1] epoch  14 val loss 1.0561 rollout 0.9692 static 0.8689
+saved runs/writer_random_hf_s1.pt best val 1.0254873037338257
+== 4. writer static / hf / seed 2
+[static s2] epoch   0 val loss 0.8862 rollout nan static 0.8862
+[static s2] epoch   1 val loss 0.8449 rollout nan static 0.8449
+[static s2] epoch   2 val loss 0.8086 rollout nan static 0.8086
+[static s2] epoch   3 val loss 0.7843 rollout nan static 0.7843
+[static s2] epoch   4 val loss 0.7601 rollout nan static 0.7601
+[static s2] epoch   5 val loss 0.7446 rollout nan static 0.7446
+[static s2] epoch   6 val loss 0.7295 rollout nan static 0.7295
+[static s2] epoch   7 val loss 0.7200 rollout nan static 0.7200
+[static s2] epoch   8 val loss 0.7078 rollout nan static 0.7078
+[static s2] epoch   9 val loss 0.7033 rollout nan static 0.7033
+[static s2] epoch  10 val loss 0.6968 rollout nan static 0.6968
+[static s2] epoch  11 val loss 0.6933 rollout nan static 0.6933
+[static s2] epoch  12 val loss 0.6853 rollout nan static 0.6853
+[static s2] epoch  13 val loss 0.6838 rollout nan static 0.6838
+[static s2] epoch  14 val loss 0.6863 rollout nan static 0.6863
+[static s2] epoch  15 val loss 0.6833 rollout nan static 0.6833
+[static s2] epoch  16 val loss 0.6774 rollout nan static 0.6774
+[static s2] epoch  17 val loss 0.6802 rollout nan static 0.6802
+[static s2] epoch  18 val loss 0.6799 rollout nan static 0.6799
+[static s2] epoch  19 val loss 0.6798 rollout nan static 0.6798
+[static s2] epoch  20 val loss 0.6786 rollout nan static 0.6786
+[static s2] epoch  21 val loss 0.6851 rollout nan static 0.6851
+[static s2] epoch  22 val loss 0.6825 rollout nan static 0.6825
+[static s2] epoch  23 val loss 0.6813 rollout nan static 0.6813
+[static s2] epoch  24 val loss 0.6813 rollout nan static 0.6813
+[static s2] epoch  25 val loss 0.6827 rollout nan static 0.6827
+[static s2] epoch  26 val loss 0.6832 rollout nan static 0.6832
+saved runs/writer_static_hf_s2.pt best val 0.6773833632469177
+== 4. writer predictive / hf / seed 2
+[predictive s2] epoch   0 val loss 0.9291 rollout 0.8379 static 0.9122
+[predictive s2] epoch   1 val loss 0.8537 rollout 0.7666 static 0.8709
+[predictive s2] epoch   2 val loss 0.8185 rollout 0.7339 static 0.8462
+[predictive s2] epoch   3 val loss 0.7948 rollout 0.7122 static 0.8264
+[predictive s2] epoch   4 val loss 0.7677 rollout 0.6870 static 0.8072
+[predictive s2] epoch   5 val loss 0.7518 rollout 0.6728 static 0.7899
+[predictive s2] epoch   6 val loss 0.7406 rollout 0.6629 static 0.7765
+[predictive s2] epoch   7 val loss 0.7203 rollout 0.6444 static 0.7588
+[predictive s2] epoch   8 val loss 0.7099 rollout 0.6351 static 0.7481
+[predictive s2] epoch   9 val loss 0.6996 rollout 0.6258 static 0.7380
+[predictive s2] epoch  10 val loss 0.6901 rollout 0.6173 static 0.7286
+[predictive s2] epoch  11 val loss 0.6852 rollout 0.6130 static 0.7220
+[predictive s2] epoch  12 val loss 0.6842 rollout 0.6124 static 0.7181
+[predictive s2] epoch  13 val loss 0.6833 rollout 0.6121 static 0.7124
+[predictive s2] epoch  14 val loss 0.6706 rollout 0.6003 static 0.7036
+[predictive s2] epoch  15 val loss 0.6695 rollout 0.5995 static 0.7000
+[predictive s2] epoch  16 val loss 0.6700 rollout 0.6003 static 0.6969
+[predictive s2] epoch  17 val loss 0.6693 rollout 0.5999 static 0.6941
+[predictive s2] epoch  18 val loss 0.6725 rollout 0.6030 static 0.6946
+[predictive s2] epoch  19 val loss 0.6686 rollout 0.5996 static 0.6907
+[predictive s2] epoch  20 val loss 0.6716 rollout 0.6023 static 0.6924
+[predictive s2] epoch  21 val loss 0.6695 rollout 0.6007 static 0.6885
+[predictive s2] epoch  22 val loss 0.6753 rollout 0.6064 static 0.6897
+[predictive s2] epoch  23 val loss 0.6684 rollout 0.6000 static 0.6845
+[predictive s2] epoch  24 val loss 0.6637 rollout 0.5955 static 0.6821
+[predictive s2] epoch  25 val loss 0.6737 rollout 0.6051 static 0.6862
+[predictive s2] epoch  26 val loss 0.6692 rollout 0.6009 static 0.6829
+[predictive s2] epoch  27 val loss 0.6647 rollout 0.5968 static 0.6787
+[predictive s2] epoch  28 val loss 0.6732 rollout 0.6049 static 0.6826
+[predictive s2] epoch  29 val loss 0.6724 rollout 0.6042 static 0.6818
+[predictive s2] epoch  30 val loss 0.6757 rollout 0.6075 static 0.6824
+[predictive s2] epoch  31 val loss 0.6726 rollout 0.6045 static 0.6811
+[predictive s2] epoch  32 val loss 0.6737 rollout 0.6059 static 0.6786
+[predictive s2] epoch  33 val loss 0.6688 rollout 0.6009 static 0.6790
+[predictive s2] epoch  34 val loss 0.6744 rollout 0.6062 static 0.6817
+saved runs/writer_predictive_hf_s2.pt best val 0.6636634469032288
+== 4. writer random / hf / seed 2
+[random s2] epoch   0 val loss 1.0480 rollout 0.9568 static 0.9119
+[random s2] epoch   1 val loss 1.0347 rollout 0.9455 static 0.8921
+[random s2] epoch   2 val loss 1.0255 rollout 0.9381 static 0.8745
+[random s2] epoch   3 val loss 1.0257 rollout 0.9392 static 0.8655
+[random s2] epoch   4 val loss 1.0239 rollout 0.9379 static 0.8600
+[random s2] epoch   5 val loss 1.0221 rollout 0.9366 static 0.8549
+[random s2] epoch   6 val loss 1.0263 rollout 0.9408 static 0.8552
+[random s2] epoch   7 val loss 1.0297 rollout 0.9444 static 0.8532
+[random s2] epoch   8 val loss 1.0282 rollout 0.9430 static 0.8515
+[random s2] epoch   9 val loss 1.0335 rollout 0.9479 static 0.8562
+[random s2] epoch  10 val loss 1.0440 rollout 0.9579 static 0.8609
+[random s2] epoch  11 val loss 1.0488 rollout 0.9621 static 0.8674
+[random s2] epoch  12 val loss 1.0474 rollout 0.9611 static 0.8631
+[random s2] epoch  13 val loss 1.0552 rollout 0.9684 static 0.8683
+[random s2] epoch  14 val loss 1.0588 rollout 0.9717 static 0.8711
+[random s2] epoch  15 val loss 1.0611 rollout 0.9739 static 0.8723
+saved runs/writer_random_hf_s2.pt best val 1.0221096277236938
+== 5. evaluate: hf
+{'train': 13440, 'val': 4800, 'test_seen': 4800, 'test_unseen': 4800} rows per group
+[seed 0] static            z0 retrieval@1 0.058  err/persist seen: 0.64 0.50 0.44 0.41 0.39 0.37 0.36 0.35 | unseen: 0.62 0.49 0.43 0.40 0.38 0.36 0.35 0.33
+[seed 0] predictive        z0 retrieval@1 0.042  err/persist seen: 0.64 0.49 0.44 0.40 0.38 0.37 0.36 0.35 | unseen: 0.62 0.48 0.43 0.40 0.38 0.36 0.35 0.33
+[seed 0] random_writer     z0 retrieval@1 0.013  err/persist seen: 0.90 0.76 0.71 0.69 0.68 0.68 0.68 0.68 | unseen: 0.88 0.76 0.72 0.70 0.69 0.69 0.69 0.69
+[seed 0] pred_state_randP  z0 retrieval@1 0.042  err/persist seen: 1.00 0.90 0.86 0.85 0.85 0.86 0.86 0.87 | unseen: 0.99 0.90 0.87 0.86 0.86 0.87 0.88 0.88
+[seed 0] pred_state_shufA  z0 retrieval@1 0.042  err/persist seen: 1.18 1.12 1.09 1.09 1.09 1.09 1.08 1.08 | unseen: 1.15 1.11 1.09 1.10 1.10 1.10 1.10 1.09
+[seed 0] probes done: a_text
+[seed 0] probes done: b_writer_state
+[seed 0] probes done: c_rollout_pred
+[seed 0] probes done: c_rollout_stat
+[seed 0] probes done: e1_state_randP
+[seed 0] probes done: e2_state_shufA
+[seed 0] probes done: e3_randwriter
+[seed 0] probes done: d_priv_start
+[seed 0] probes done: f_priv_future
+[seed 1] static            z0 retrieval@1 0.051  err/persist seen: 0.65 0.50 0.44 0.41 0.39 0.37 0.36 0.35 | unseen: 0.62 0.49 0.44 0.40 0.38 0.37 0.35 0.34
+[seed 1] predictive        z0 retrieval@1 0.050  err/persist seen: 0.64 0.49 0.44 0.40 0.38 0.37 0.36 0.35 | unseen: 0.61 0.48 0.43 0.39 0.37 0.36 0.35 0.33
+[seed 1] random_writer     z0 retrieval@1 0.013  err/persist seen: 0.90 0.76 0.71 0.69 0.68 0.68 0.68 0.69 | unseen: 0.88 0.76 0.72 0.70 0.69 0.70 0.70 0.70
+[seed 1] pred_state_randP  z0 retrieval@1 0.050  err/persist seen: 1.01 0.91 0.87 0.87 0.87 0.88 0.89 0.91 | unseen: 1.00 0.91 0.88 0.88 0.88 0.89 0.91 0.91
+[seed 1] pred_state_shufA  z0 retrieval@1 0.050  err/persist seen: 1.20 1.13 1.09 1.10 1.10 1.10 1.08 1.08 | unseen: 1.16 1.12 1.10 1.10 1.10 1.11 1.11 1.09
+[seed 1] probes done: a_text
+[seed 1] probes done: b_writer_state
+[seed 1] probes done: c_rollout_pred
+[seed 1] probes done: c_rollout_stat
+[seed 1] probes done: e1_state_randP
+[seed 1] probes done: e2_state_shufA
+[seed 1] probes done: e3_randwriter
+[seed 1] probes done: d_priv_start
+[seed 1] probes done: f_priv_future
+[seed 2] static            z0 retrieval@1 0.050  err/persist seen: 0.64 0.50 0.44 0.41 0.39 0.37 0.36 0.35 | unseen: 0.62 0.49 0.44 0.40 0.38 0.36 0.35 0.34
+[seed 2] predictive        z0 retrieval@1 0.051  err/persist seen: 0.64 0.50 0.44 0.41 0.39 0.37 0.36 0.35 | unseen: 0.61 0.49 0.44 0.40 0.38 0.36 0.35 0.33
+[seed 2] random_writer     z0 retrieval@1 0.016  err/persist seen: 0.90 0.76 0.71 0.69 0.68 0.68 0.68 0.68 | unseen: 0.88 0.76 0.72 0.70 0.70 0.70 0.70 0.70
+[seed 2] pred_state_randP  z0 retrieval@1 0.051  err/persist seen: 1.03 0.93 0.89 0.88 0.88 0.89 0.90 0.91 | unseen: 1.02 0.93 0.90 0.89 0.90 0.91 0.92 0.92
+[seed 2] pred_state_shufA  z0 retrieval@1 0.051  err/persist seen: 1.21 1.14 1.10 1.10 1.10 1.10 1.09 1.09 | unseen: 1.18 1.13 1.11 1.11 1.11 1.11 1.11 1.10
+[seed 2] probes done: a_text
+[seed 2] probes done: b_writer_state
+[seed 2] probes done: c_rollout_pred
+[seed 2] probes done: c_rollout_stat
+[seed 2] probes done: e1_state_randP
+[seed 2] probes done: e2_state_shufA
+[seed 2] probes done: e3_randwriter
+[seed 2] probes done: d_priv_start
+[seed 2] probes done: f_priv_future
+wrote results/hf/report.md
+done. Reports: results/*/report.md   World-model sanity: tail logs/wm.log

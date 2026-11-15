@@ -1,4 +1,21 @@
-[random s0] epoch   0 val loss 0.0092 rollout 0.0088 static 0.0041
-[random s0] epoch   1 val loss 0.0070 rollout 0.0064 static 0.0057
-[random s0] epoch   2 val loss 0.0066 rollout 0.0058 static 0.0081
-saved runs/writer_random_bow_s0.pt best val 0.006590035744011402
+[random s0] epoch   0 val loss 1.0350 rollout 0.9444 static 0.9063
+[random s0] epoch   1 val loss 0.9949 rollout 0.9108 static 0.8413
+[random s0] epoch   2 val loss 0.9588 rollout 0.8802 static 0.7858
+[random s0] epoch   3 val loss 0.9389 rollout 0.8640 static 0.7489
+[random s0] epoch   4 val loss 0.9315 rollout 0.8585 static 0.7308
+[random s0] epoch   5 val loss 0.9304 rollout 0.8580 static 0.7233
+[random s0] epoch   6 val loss 0.9309 rollout 0.8589 static 0.7202
+[random s0] epoch   7 val loss 0.9277 rollout 0.8568 static 0.7098
+[random s0] epoch   8 val loss 0.9293 rollout 0.8585 static 0.7085
+[random s0] epoch   9 val loss 0.9274 rollout 0.8569 static 0.7051
+[random s0] epoch  10 val loss 0.9297 rollout 0.8592 static 0.7048
+[random s0] epoch  11 val loss 0.9295 rollout 0.8592 static 0.7035
+[random s0] epoch  12 val loss 0.9302 rollout 0.8599 static 0.7029
+[random s0] epoch  13 val loss 0.9307 rollout 0.8605 static 0.7020
+[random s0] epoch  14 val loss 0.9320 rollout 0.8617 static 0.7024
+[random s0] epoch  15 val loss 0.9323 rollout 0.8621 static 0.7025
+[random s0] epoch  16 val loss 0.9322 rollout 0.8619 static 0.7034
+[random s0] epoch  17 val loss 0.9321 rollout 0.8618 static 0.7032
+[random s0] epoch  18 val loss 0.9328 rollout 0.8626 static 0.7024
+[random s0] epoch  19 val loss 0.9319 rollout 0.8616 static 0.7032
+saved runs/writer_random_bow_s0.pt best val 0.9274295568466187

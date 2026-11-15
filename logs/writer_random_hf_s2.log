@@ -1,0 +1,17 @@
+[random s2] epoch   0 val loss 1.0480 rollout 0.9568 static 0.9119
+[random s2] epoch   1 val loss 1.0347 rollout 0.9455 static 0.8921
+[random s2] epoch   2 val loss 1.0255 rollout 0.9381 static 0.8745
+[random s2] epoch   3 val loss 1.0257 rollout 0.9392 static 0.8655
+[random s2] epoch   4 val loss 1.0239 rollout 0.9379 static 0.8600
+[random s2] epoch   5 val loss 1.0221 rollout 0.9366 static 0.8549
+[random s2] epoch   6 val loss 1.0263 rollout 0.9408 static 0.8552
+[random s2] epoch   7 val loss 1.0297 rollout 0.9444 static 0.8532
+[random s2] epoch   8 val loss 1.0282 rollout 0.9430 static 0.8515
+[random s2] epoch   9 val loss 1.0335 rollout 0.9479 static 0.8562
+[random s2] epoch  10 val loss 1.0440 rollout 0.9579 static 0.8609
+[random s2] epoch  11 val loss 1.0488 rollout 0.9621 static 0.8674
+[random s2] epoch  12 val loss 1.0474 rollout 0.9611 static 0.8631
+[random s2] epoch  13 val loss 1.0552 rollout 0.9684 static 0.8683
+[random s2] epoch  14 val loss 1.0588 rollout 0.9717 static 0.8711
+[random s2] epoch  15 val loss 1.0611 rollout 0.9739 static 0.8723
+saved runs/writer_random_hf_s2.pt best val 1.0221096277236938

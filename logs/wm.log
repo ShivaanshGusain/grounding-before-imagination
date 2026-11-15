@@ -1,35 +1,65 @@
 step      1 loss 1.0271 pred 0.0185 var 0.990 cov 0.000 (1s)
-step      6 loss 0.9691 pred 0.0181 var 0.948 cov 0.001 (3s)
-step     12 loss 1.0835 pred 0.2998 var 0.557 cov 5.061 (4s)
-step     18 loss 0.8528 pred 0.0306 var 0.810 cov 0.179 (6s)
-step     24 loss 0.7939 pred 0.0313 var 0.722 cov 0.783 (8s)
-step     30 loss 0.7473 pred 0.0049 var 0.659 cov 1.767 (9s)
-step     36 loss 0.7475 pred 0.0044 var 0.663 cov 1.668 (11s)
-step     42 loss 0.7418 pred 0.0022 var 0.656 cov 1.782 (13s)
-step     48 loss 0.7402 pred 0.0013 var 0.636 cov 2.237 (14s)
-step     54 loss 0.7394 pred 0.0010 var 0.644 cov 2.045 (16s)
-step     60 loss 0.7395 pred 0.0010 var 0.647 cov 1.970 (18s)
-calib     3/15 pred-on-target 0.0001
-calib     6/15 pred-on-target 0.0001
-calib     9/15 pred-on-target 0.0001
-calib    12/15 pred-on-target 0.0001
-calib    15/15 pred-on-target 0.0001
+step    200 loss 0.7424 pred 0.0024 var 0.632 cov 2.324 (55s)
+step    400 loss 0.7320 pred 0.0010 var 0.644 cov 2.061 (109s)
+step    600 loss 0.7278 pred 0.0001 var 0.643 cov 2.090 (164s)
+step    800 loss 0.7267 pred 0.0001 var 0.638 cov 2.198 (218s)
+step   1000 loss 0.7265 pred 0.0001 var 0.638 cov 2.208 (273s)
+step   1200 loss 0.7266 pred 0.0002 var 0.641 cov 2.137 (328s)
+step   1400 loss 0.7263 pred 0.0001 var 0.634 cov 2.308 (382s)
+step   1600 loss 0.7263 pred 0.0003 var 0.634 cov 2.291 (437s)
+step   1800 loss 0.7260 pred 0.0003 var 0.634 cov 2.281 (492s)
+step   2000 loss 0.6571 pred 0.0071 var 0.513 cov 3.079 (547s)
+step   2200 loss 0.5338 pred 0.0231 var 0.352 cov 2.854 (602s)
+step   2400 loss 0.5922 pred 0.1099 var 0.152 cov 4.115 (656s)
+step   2600 loss 0.8656 pred 0.2863 var 0.059 cov 4.438 (711s)
+step   2800 loss 1.2185 pred 0.4392 var 0.010 cov 5.481 (766s)
+step   3000 loss 1.3374 pred 0.5117 var 0.041 cov 4.184 (821s)
+step   3200 loss 1.1412 pred 0.4334 var 0.019 cov 4.490 (876s)
+step   3400 loss 0.9702 pred 0.3697 var 0.013 cov 4.568 (931s)
+step   3600 loss 0.7801 pred 0.2855 var 0.037 cov 3.838 (986s)
+step   3800 loss 0.7144 pred 0.2627 var 0.019 cov 4.160 (1041s)
+step   4000 loss 0.6079 pred 0.2149 var 0.022 cov 3.906 (1096s)
+step   4200 loss 0.6116 pred 0.2198 var 0.011 cov 4.117 (1151s)
+step   4400 loss 0.5716 pred 0.2019 var 0.012 cov 3.967 (1206s)
+step   4600 loss 0.5227 pred 0.1789 var 0.025 cov 3.564 (1260s)
+step   4800 loss 0.5409 pred 0.1909 var 0.024 cov 3.474 (1315s)
+step   5000 loss 0.5276 pred 0.1862 var 0.007 cov 3.781 (1370s)
+step   5200 loss 0.5332 pred 0.1901 var 0.007 cov 3.681 (1425s)
+step   5400 loss 0.5116 pred 0.1798 var 0.020 cov 3.326 (1480s)
+step   5600 loss 0.5023 pred 0.1789 var 0.011 cov 3.406 (1535s)
+step   5800 loss 0.4421 pred 0.1487 var 0.016 cov 3.262 (1590s)
+step   6000 loss 0.4796 pred 0.1689 var 0.017 cov 3.152 (1645s)
+step   6200 loss 0.4302 pred 0.1452 var 0.017 cov 3.115 (1700s)
+step   6400 loss 0.4449 pred 0.1544 var 0.006 cov 3.289 (1755s)
+step   6600 loss 0.4464 pred 0.1562 var 0.018 cov 2.925 (1810s)
+step   6800 loss 0.4735 pred 0.1702 var 0.011 cov 3.066 (1865s)
+step   7000 loss 0.4474 pred 0.1565 var 0.013 cov 3.034 (1920s)
+step   7200 loss 0.4626 pred 0.1660 var 0.012 cov 2.973 (1974s)
+step   7400 loss 0.4926 pred 0.1801 var 0.014 cov 2.968 (2029s)
+step   7600 loss 0.4628 pred 0.1664 var 0.010 cov 2.991 (2084s)
+step   7800 loss 0.5025 pred 0.1854 var 0.009 cov 3.056 (2139s)
+step   8000 loss 0.4536 pred 0.1599 var 0.012 cov 3.042 (2193s)
+calib   200/1000 pred-on-target 0.1740
+calib   400/1000 pred-on-target 0.1641
+calib   600/1000 pred-on-target 0.1629
+calib   800/1000 pred-on-target 0.1649
+calib  1000/1000 pred-on-target 0.1494
 {
-  "state_probe_R2_encoder_t0": 0.08675888180732727,
-  "state_probe_R2_encoder_t0_train": 0.17145729064941406,
-  "latent_std_mean": 0.005756184458732605,
-  "online_target_gap": 3432.27783203125,
-  "state_probe_R2_rollout_t1": -10.822425842285156,
-  "rollout_err_over_persistence_t1": 5683.0384747009375,
-  "state_probe_R2_rollout_t2": -19.115570068359375,
-  "rollout_err_over_persistence_t2": 2925.2225085959103,
-  "state_probe_R2_rollout_t3": -141.059814453125,
-  "rollout_err_over_persistence_t3": 2448.260097398783,
-  "state_probe_R2_rollout_t4": -213.8797607421875,
-  "rollout_err_over_persistence_t4": 2293.684651825283,
-  "state_probe_R2_rollout_t5": -307.1761474609375,
-  "rollout_err_over_persistence_t5": 2256.257124632585,
-  "state_probe_R2_rollout_t6": -326.12640380859375,
-  "rollout_err_over_persistence_t6": 2290.800595625167
+  "state_probe_R2_encoder_t0": 0.38789069652557373,
+  "state_probe_R2_encoder_t0_train": 0.4976806640625,
+  "latent_std_mean": 0.9995743036270142,
+  "online_target_gap": 2.964242230518721e-05,
+  "state_probe_R2_rollout_t1": 0.392048716545105,
+  "rollout_err_over_persistence_t1": 0.03936119180190081,
+  "state_probe_R2_rollout_t2": 0.38846325874328613,
+  "rollout_err_over_persistence_t2": 0.06695435363809833,
+  "state_probe_R2_rollout_t3": 0.3847929835319519,
+  "rollout_err_over_persistence_t3": 0.07754643219805232,
+  "state_probe_R2_rollout_t4": 0.3784479796886444,
+  "rollout_err_over_persistence_t4": 0.08775488228432912,
+  "state_probe_R2_rollout_t5": 0.3736129403114319,
+  "rollout_err_over_persistence_t5": 0.09220973966759963,
+  "state_probe_R2_rollout_t6": 0.36581671237945557,
+  "rollout_err_over_persistence_t6": 0.10145771114839149
 }
 saved runs/wm.pt

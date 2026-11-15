@@ -1,8 +1,54 @@
-scenes 240/240
+scenes 256/12000
+scenes 512/12000
+scenes 768/12000
+scenes 1024/12000
+scenes 1280/12000
+scenes 1536/12000
+scenes 1792/12000
+scenes 2048/12000
+scenes 2304/12000
+scenes 2560/12000
+scenes 2816/12000
+scenes 3072/12000
+scenes 3328/12000
+scenes 3584/12000
+scenes 3840/12000
+scenes 4096/12000
+scenes 4352/12000
+scenes 4608/12000
+scenes 4864/12000
+scenes 5120/12000
+scenes 5376/12000
+scenes 5632/12000
+scenes 5888/12000
+scenes 6144/12000
+scenes 6400/12000
+scenes 6656/12000
+scenes 6912/12000
+scenes 7168/12000
+scenes 7424/12000
+scenes 7680/12000
+scenes 7936/12000
+scenes 8192/12000
+scenes 8448/12000
+scenes 8704/12000
+scenes 8960/12000
+scenes 9216/12000
+scenes 9472/12000
+scenes 9728/12000
+scenes 9984/12000
+scenes 10240/12000
+scenes 10496/12000
+scenes 10752/12000
+scenes 11008/12000
+scenes 11264/12000
+scenes 11520/12000
+scenes 11776/12000
+scenes 12000/12000
 saved runs/data.pt
-example text: The surface of the table is rough. The pusher starts at position (0.19, 0.79). A yellow heavy metal puck is at position (0.62, 0.74). There is a blue steel puck at position (0.50, 0.46). A red wood puck is at (0.72, 0.30).
-label red_contacted: class counts [584, 376]
-label red_moved: class counts [653, 307]
-label red_hit_other: class counts [834, 126]
-label red_final_region: class counts [104, 133, 105, 126, 96, 85, 93, 88, 130]
-held-out-action sequences in test: 96 / 192
+example text: The table is sticky. The robot pusher is at position (0.19, 0.79). The yellow puck (light wooden) is at x=0.62, y=0.74. There is a red steel puck at x=0.72, y=0.30. The purple puck (light wooden) is at position (0.50, 0.46).
+label red_contacted: class counts [29364, 18636]
+label red_moved: class counts [32548, 15452]
+label red_hit_other: class counts [42659, 5341]
+label red_final_region: class counts [5217, 5467, 5170, 5511, 5353, 5474, 5186, 5353, 5269]
+held-out-action sequences in test: 4800 / 9600

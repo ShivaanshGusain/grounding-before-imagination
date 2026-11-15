@@ -1,0 +1,1572 @@
+{
+ "static": {
+  "0": {
+   "z0_mse": 0.6770055294036865,
+   "z0_retrieval_top1": 0.05791666731238365,
+   "test_seen": {
+    "1": {
+     "err": 0.651154637336731,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.638745312415403,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.610072910785675,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.49719829037226365,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.5883004665374756,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.4387235309094685,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.5674201846122742,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.4072659234994372,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.5497677326202393,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.3852575832101432,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.5385304093360901,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.3723523436990645,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 0.5299069285392761,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.35979356543778773,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 0.5197046995162964,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.3471933288151575,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.6477555632591248,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.6165123806973672,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.6091316938400269,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.4869080093540151,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.5832895040512085,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.4347787491880643,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.5576196312904358,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.3979226943290272,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.5412999987602234,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.3787645682337494,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 0.5260729193687439,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.36394269177357075,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 0.5118798613548279,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.34860168731627506,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 0.5013794302940369,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.3346094242200589,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "1": {
+   "z0_mse": 0.685373067855835,
+   "z0_retrieval_top1": 0.051249999552965164,
+   "test_seen": {
+    "1": {
+     "err": 0.6622004508972168,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.649580621309819,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.618319034576416,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.5039187307958097,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.5944674611091614,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.4433225509468207,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.5723686218261719,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.4108176650596606,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.5546318292617798,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.38866616833697337,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.5409002900123596,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.3739909338488463,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 0.5326380729675293,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.36164794427045466,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 0.5227394700050354,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.3492207341265891,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.6562770009040833,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.624622803991958,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.617867112159729,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.49389064576570346,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.5911439061164856,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.4406333498312151,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.5634369254112244,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.4020739709705824,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.5440341234207153,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.3806777209196913,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 0.5294643044471741,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.36628888708004204,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 0.516136884689331,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.35150081586066584,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 0.5042303800582886,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.33651208436416796,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "2": {
+   "z0_mse": 0.6780915260314941,
+   "z0_retrieval_top1": 0.05000000074505806,
+   "test_seen": {
+    "1": {
+     "err": 0.6541004776954651,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.6416350126684206,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.6117848753929138,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.4985935102891761,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.5888511538505554,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.4391342045297758,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.5681329369544983,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.407777501601088,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.5511544942855835,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.3862293762346859,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.5376235246658325,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.3717253027249969,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 0.5286667346954346,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.3589515048024612,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 0.5197360515594482,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.3472142738253473,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.6486722826957703,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.6173848840217298,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.6088500022888184,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.486682839864662,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.5843088626861572,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.4355385699446506,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.5581797957420349,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.39832243303143233,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.5400209426879883,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.3778695726267727,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 0.5255857706069946,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.36360567721699955,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 0.5138294100761414,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.34992937380106154,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 0.50397127866745,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.33633916588773133,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  }
+ },
+ "predictive": {
+  "0": {
+   "z0_mse": 0.6922825574874878,
+   "z0_retrieval_top1": 0.04208333417773247,
+   "test_seen": {
+    "1": {
+     "err": 0.6511527895927429,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.6387434998846412,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.606070339679718,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.4939362679552834,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.5853976607322693,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.4365587710888616,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.5636076927185059,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.40452950686489214,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.5455480217933655,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.38230056063761253,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.5346696376800537,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.3696829171454474,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 0.5280846357345581,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.358556274151017,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 0.519105076789856,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.34679274554042505,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.646793007850647,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.6155962522067867,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.6066533327102661,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.4849269371222539,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.5806798934936523,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.43283356895388914,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.5554572939872742,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.39637962977850016,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.5404753684997559,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.37818754860457177,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 0.5247117280960083,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.36300100555940007,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 0.5146753787994385,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.3505054975102022,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 0.5010823011398315,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.3344111268644029,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "1": {
+   "z0_mse": 0.6895211338996887,
+   "z0_retrieval_top1": 0.04958333447575569,
+   "test_seen": {
+    "1": {
+     "err": 0.6498786807060242,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.6374936722212354,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.6051537990570068,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.4931893040717668,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.583868145942688,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.4354181394435855,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.563485324382782,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.40444167697338107,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.545669674873352,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.3823858107692678,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.5349496603012085,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.3698765312431253,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 0.5295321345329285,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.359539089671222,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 0.5196148753166199,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.34713332096276966,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.6445288062095642,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.6134412597631874,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.6043306589126587,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.48307031319903904,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.5784856081008911,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.43119796836138713,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.5528910160064697,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.39454830930264867,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.5357751846313477,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.37489868269359017,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 0.5211060643196106,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.36050657003136094,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 0.5093209147453308,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.3468589871767113,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 0.4976324439048767,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.3321087692619925,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "2": {
+   "z0_mse": 0.6832202076911926,
+   "z0_retrieval_top1": 0.050833333283662796,
+   "test_seen": {
+    "1": {
+     "err": 0.6496815085411072,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.6373002576483243,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.6094498038291931,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.4966904695724794,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.5901793837547302,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.4401247284993535,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.5670016407966614,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.4069655136123497,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.5500715374946594,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.3854704788108521,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.537741482257843,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.37180686132425284,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 0.531777024269104,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.3610633137164138,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 0.522859513759613,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.3493009304203576,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.6436079740524292,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.6125648420871096,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.6079376339912415,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.48595354037809224,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.5853888988494873,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.43634361918505205,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.5586035847663879,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.3986248529265271,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.5422543287277222,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.37943234281146987,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 0.5251155495643616,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.3632803734317566,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 0.5146934390068054,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.3505177969172247,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 0.5012499094009399,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.3345229848712444,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  }
+ },
+ "random_writer": {
+  "0": {
+   "z0_mse": 0.8615021705627441,
+   "z0_retrieval_top1": 0.012500000186264515,
+   "test_seen": {
+    "1": {
+     "err": 0.9194859266281128,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.9019629006526163,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.9371014833450317,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.7637206097619149,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.9511810541152954,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.7093407779391412,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.9602667689323425,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.689231618932069,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.9711976647377014,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.6805806214797251,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.9829795360565186,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.6796547190530862,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 0.9972735643386841,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.6771238345936655,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.0137933492660522,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.6772736286393947,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.9234368205070496,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.878896708767694,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.9494825601577759,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.7589666864456258,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.9669727087020874,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.7207727584132533,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.9794354438781738,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.6989344866632826,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.9913692474365234,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.6936921223453447,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.0030217170715332,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.6939008076226235,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.02003014087677,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.6946634456021583,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.0348440408706665,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.6906317805463651,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "1": {
+   "z0_mse": 0.863610029220581,
+   "z0_retrieval_top1": 0.013333333656191826,
+   "test_seen": {
+    "1": {
+     "err": 0.9192216396331787,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.9017036502849357,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.9369385242462158,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.7635878010698727,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.9517349600791931,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.7097538518598594,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.9618915319442749,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.6903977928301204,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.9735614061355591,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.6822370469922451,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.9882829189300537,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.6833216002695596,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.0048152208328247,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.6822444309346375,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.0262165069580078,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.6855730291979814,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.9235405921936035,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.878995475236336,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.9496075510978699,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.7590665976642406,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.9669289588928223,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.7207401476989898,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.9807062149047852,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.6998413210041293,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.9930706024169922,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.6948826137291717,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.0068033933639526,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.6965170104314108,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.0264813899993896,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.6990568912116231,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.0453283786773682,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.6976287932374754,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "2": {
+   "z0_mse": 0.8591508269309998,
+   "z0_retrieval_top1": 0.0162500012665987,
+   "test_seen": {
+    "1": {
+     "err": 0.9188297986984253,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 0.9013192768259523,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 0.9372005462646484,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.7638013442338148,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 0.952080488204956,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.7100115285539736,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 0.9614537954330444,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.6900836073828447,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 0.9730349183082581,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.6818681031348658,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 0.9858137369155884,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.6816143508846285,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.0012954473495483,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.6798545926764885,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.0191221237182617,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.6808335636222603,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 0.9224440455436707,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.8779518183014664,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 0.9489758610725403,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.7585616577048321,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 0.9666011929512024,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.7204958339146097,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 0.981804609298706,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.7006251457336379,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 0.993281900882721,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.6950304658856903,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.0073893070220947,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.6969223515657672,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.0256935358047485,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.6985203448023072,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.0426653623580933,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.6958515556735837,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  }
+ },
+ "pred_state_randP": {
+  "0": {
+   "z0_mse": 0.6922825574874878,
+   "z0_retrieval_top1": 0.04208333417773247,
+   "test_seen": {
+    "1": {
+     "err": 1.0214848518371582,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 1.00201798989403,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 1.1061629056930542,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.9015025841345978,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 1.15326988697052,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.8600479953402168,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 1.1869837045669556,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.8519577338433428,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 1.2107785940170288,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.8484703762266663,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 1.240625023841858,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.8577967506955148,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.2706167697906494,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.8627170419685093,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.3035205602645874,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.8708284587737692,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 1.0356050729751587,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.9856547519095229,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 1.1200164556503296,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.8952825610280307,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 1.1675711870193481,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.8702970596154068,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 1.2025165557861328,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.8581272986145085,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 1.2322423458099365,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.8622385759080479,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.2564202547073364,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.8692045392599073,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.2888987064361572,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.877768980116121,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.3218121528625488,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.8821478837634602,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "1": {
+   "z0_mse": 0.6895211338996887,
+   "z0_retrieval_top1": 0.04958333447575569,
+   "test_seen": {
+    "1": {
+     "err": 1.0306401252746582,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 1.010998787475389,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 1.1194512844085693,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.9123323703164898,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 1.172196626663208,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.8741625618566305,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 1.2098079919815063,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.8683398695942156,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 1.237661361694336,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.8673088592638533,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 1.2752166986465454,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.8817142323505996,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.3112221956253052,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.8902871116361067,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.3556416034698486,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.9056483834513713,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 1.0501567125320435,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 0.9995045224944745,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 1.1379276514053345,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.9095998338910479,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 1.1858086585998535,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.8838911068716195,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 1.2269963026046753,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.8755962797333839,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 1.2603912353515625,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.8819352358339908,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.289115071296692,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.8918231518485411,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.3300364017486572,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.9057846749713238,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.370123267173767,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.9143896415348669,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "2": {
+   "z0_mse": 0.6832202076911926,
+   "z0_retrieval_top1": 0.050833333283662796,
+   "test_seen": {
+    "1": {
+     "err": 1.050769329071045,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 1.030744380657654,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 1.141592025756836,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 0.9303766705162081,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 1.1956583261489868,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 0.8916590627520316,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 1.2318542003631592,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 0.8841635390013061,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 1.2581346035003662,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 0.8816557755899092,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 1.2898038625717163,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 0.8918001338731449,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.322180986404419,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 0.8977278567838877,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.3614758253097534,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 0.9095459870395781,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 1.069094181060791,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 1.017528580440495,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 1.1617894172668457,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 0.9286736811933545,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 1.2110059261322021,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 0.9026729234216903,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 1.250109076499939,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 0.8920897759191927,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 1.2826623916625977,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 0.8975190616672368,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.3082752227783203,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 0.9050783429984308,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.3472087383270264,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 0.9174794220366568,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.3822147846221924,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 0.9224592499928597,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  }
+ },
+ "pred_state_shufA": {
+  "0": {
+   "z0_mse": 0.6922825574874878,
+   "z0_retrieval_top1": 0.04208333417773247,
+   "test_seen": {
+    "1": {
+     "err": 1.205370306968689,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 1.1823990633776522,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 1.3714302778244019,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 1.11769065212371,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 1.4549566507339478,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 1.0850301086571545,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 1.5162780284881592,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 1.088308784743182,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 1.5586541891098022,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 1.092249163287292,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 1.5774847269058228,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 1.0907093174868148,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.5869171619415283,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 1.077477105882073,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.6120742559432983,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 1.076960488791234,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 1.2100334167480469,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 1.1516698964795795,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 1.3863320350646973,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 1.108161302922334,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 1.4653162956237793,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 1.09223358512596,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 1.5365643501281738,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 1.0965069949168789,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 1.5720683336257935,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 1.1000254664391453,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.5938206911087036,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 1.1026216540903704,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.6213315725326538,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 1.1041632315600023,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.6310032606124878,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 1.0884951175889397,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "1": {
+   "z0_mse": 0.6895211338996887,
+   "z0_retrieval_top1": 0.04958333447575569,
+   "test_seen": {
+    "1": {
+     "err": 1.2206047773361206,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 1.1973432041030083,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 1.3866361379623413,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 1.1300831506768532,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 1.4665532112121582,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 1.09367821323771,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 1.5257457494735718,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 1.0951042429153193,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 1.5650442838668823,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 1.0967271133678889,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 1.5848227739334106,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 1.0957830124194088,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.5926662683486938,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 1.0813806054985382,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.6171619892120361,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 1.0803593940759866,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 1.2230517864227295,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 1.1640603513612868,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 1.3998370170593262,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 1.1189564790162143,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 1.4764782190322876,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 1.100553582424691,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 1.5472592115402222,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 1.1041389501597552,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 1.5772509574890137,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 1.1036519107294955,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.600056767463684,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 1.1069358362715411,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.6247668266296387,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 1.1065027167888204,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.6353724002838135,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 1.0914109837402532,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  },
+  "2": {
+   "z0_mse": 0.6832202076911926,
+   "z0_retrieval_top1": 0.050833333283662796,
+   "test_seen": {
+    "1": {
+     "err": 1.2312328815460205,
+     "persist": 1.0194276571273804,
+     "err_over_persistence": 1.2077687641077748,
+     "privileged_over_persistence": 0.03912135334889615
+    },
+    "2": {
+     "err": 1.3935284614562988,
+     "persist": 1.227021336555481,
+     "err_over_persistence": 1.135700268561132,
+     "privileged_over_persistence": 0.06252042650146444
+    },
+    "3": {
+     "err": 1.4755765199661255,
+     "persist": 1.3409366607666016,
+     "err_over_persistence": 1.1004073220897335,
+     "privileged_over_persistence": 0.07599392217265948
+    },
+    "4": {
+     "err": 1.533313274383545,
+     "persist": 1.3932424783706665,
+     "err_over_persistence": 1.1005358350663301,
+     "privileged_over_persistence": 0.0852189041327964
+    },
+    "5": {
+     "err": 1.5700020790100098,
+     "persist": 1.4270133972167969,
+     "err_over_persistence": 1.10020135905668,
+     "privileged_over_persistence": 0.09150385116738799
+    },
+    "6": {
+     "err": 1.5925489664077759,
+     "persist": 1.446292519569397,
+     "err_over_persistence": 1.1011250800646633,
+     "privileged_over_persistence": 0.09800050789700719
+    },
+    "7": {
+     "err": 1.6000398397445679,
+     "persist": 1.4728082418441772,
+     "err_over_persistence": 1.0863870762571763,
+     "privileged_over_persistence": 0.10346424967569313
+    },
+    "8": {
+     "err": 1.624112606048584,
+     "persist": 1.4968740940093994,
+     "err_over_persistence": 1.0850028152323583,
+     "privileged_over_persistence": 0.10825590780691409
+    }
+   },
+   "test_unseen": {
+    "1": {
+     "err": 1.2354825735092163,
+     "persist": 1.0506772994995117,
+     "err_over_persistence": 1.1758915645153238,
+     "privileged_over_persistence": 0.038926249358953995
+    },
+    "2": {
+     "err": 1.4092204570770264,
+     "persist": 1.251020073890686,
+     "err_over_persistence": 1.1264571100720513,
+     "privileged_over_persistence": 0.06130406700121599
+    },
+    "3": {
+     "err": 1.4845329523086548,
+     "persist": 1.3415777683258057,
+     "err_over_persistence": 1.106557508150457,
+     "privileged_over_persistence": 0.07193691981585165
+    },
+    "4": {
+     "err": 1.5516009330749512,
+     "persist": 1.4013265371322632,
+     "err_over_persistence": 1.107237244111723,
+     "privileged_over_persistence": 0.08060743907004733
+    },
+    "5": {
+     "err": 1.5873905420303345,
+     "persist": 1.4291199445724487,
+     "err_over_persistence": 1.110746895709468,
+     "privileged_over_persistence": 0.08739500828597685
+    },
+    "6": {
+     "err": 1.6087816953659058,
+     "persist": 1.445482850074768,
+     "err_over_persistence": 1.112971831718855,
+     "privileged_over_persistence": 0.094153972644133
+    },
+    "7": {
+     "err": 1.6328734159469604,
+     "persist": 1.468380331993103,
+     "err_over_persistence": 1.1120234862657028,
+     "privileged_over_persistence": 0.10038679605480486
+    },
+    "8": {
+     "err": 1.642624855041504,
+     "persist": 1.4984019994735718,
+     "err_over_persistence": 1.0962511099281778,
+     "privileged_over_persistence": 0.10523825636120812
+    }
+   }
+  }
+ }
+}
