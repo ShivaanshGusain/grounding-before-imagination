@@ -1,0 +1,5 @@
+# Install these on the GX10 (NOT on the laptop). Prefer an NVIDIA NGC PyTorch container on the
+# GX10 (ARM64 + Blackwell), which already ships a CUDA-enabled torch; then only add transformers.
+torch>=2.4
+transformers>=4.45   # only needed for --encoder hf
+accelerate           # optional, faster HF model loading
